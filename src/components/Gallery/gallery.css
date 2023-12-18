@@ -1,0 +1,12 @@
+
+.slick-slider {
+  width: 500px;
+  background-position: center;
+  height: 200px;
+}
+
+
+.slick-slide img {
+  width: 100%;
+  height: 200px;
+}

@@ -1,0 +1,57 @@
+.container {
+    background-color: white;
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+.left-about{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex:1;
+    padding: 20px;
+}
+
+.tag{
+    font-family: 'Georgia';
+    font-size: 24px;
+    font-weight: bold;
+}
+.tag-about{
+    font-family: 'Blackadder ITC';
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.right-about{
+    display: flex;
+    justify-content: flex-end;
+    flex: 1;
+    
+}
+.about-head{
+    font-family: "Georgia";
+    font-size: 36px;
+}
+
+.about-text{
+    font-size: 18px;
+    font-family: "Georgia";
+}
+
+.about-img{
+    height: 90vh;
+    width: 100vw;
+    object-fit: fill;
+}
+
+
+@media screen and (max-width:756px) {
+    .container{
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+    .aboout-img{
+        height: 50vh;
+    }
+}

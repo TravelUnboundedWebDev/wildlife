@@ -1,0 +1,12 @@
+.destinations-container{
+  flex-wrap: wrap;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.destination-img-package{
+  height: 100vh;
+  width: 100%;
+  object-fit: cover;
+}

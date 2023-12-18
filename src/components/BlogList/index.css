@@ -1,0 +1,24 @@
+.card-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  flex-direction: row;
+}
+.destination-img{
+  height: 100vh;
+  width: 100%;
+  object-fit: cover;
+  background-position: center;
+}
+.blog-img-container{
+  position: relative;
+  width: 100%;
+}
+.banner-text-blog {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  font-family: 'Roboto';
+}

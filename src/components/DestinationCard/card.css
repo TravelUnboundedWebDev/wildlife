@@ -1,0 +1,83 @@
+
+.package-container {
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+  }
+  
+  .package-card {
+    border: 4px solid whitesmoke;
+    padding: 20px;
+    width: 400px;
+    height: auto;
+    text-align: start;
+    border-radius: 12px;
+  }
+  .package-card:hover{
+    border:1px solid white;
+  }
+  .btn-container-card{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  .view-button-card {
+    color: rgb(32, 124, 178);
+    font-family: 'Georgia';
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+    flex-direction: wrap;
+    margin-right: 20px;
+    border-radius: 6px;
+    border:1px solid rgb(32, 124, 178);
+  }
+  
+  .view-button-card:hover {
+    background-color: rgb(32,124,178);
+    color: white;
+  }
+.heading{
+  margin-left: 65px;
+}
+
+.card-img{
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  background-position: center;
+}
+.title{
+  font-family: 'Italic';
+  font-size: 20px;
+}
+.title-date{
+  font-family: italic;
+  font-size: 20px;
+  font-weight: 600;
+}
+.title-rate{
+  font-family: 'Italic';
+  font-size: 20px;
+  color: rgb(223,135,3);
+}
+@media  screen and (max-width:768px) {
+  .package-container{
+    margin-left: 0px;
+    margin: 10px;
+    justify-content: center;
+  }
+  .package-card{
+    width: auto;
+  }
+  .heading{
+    margin-left: 0px;
+  }
+  .view-button-card{
+    margin-right: 20px;
+    height: 40px;
+  }
+  
+}

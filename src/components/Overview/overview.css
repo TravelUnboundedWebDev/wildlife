@@ -1,0 +1,125 @@
+.app-overview{
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  margin-right: 70px;
+}
+.iti-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+.carousel-container-overview{
+  position: relative;
+  width: 50%;
+  margin: 0 auto;
+}
+.carousel-content-overview{
+  flex: 1;
+  overflow: hidden;
+  width: 100%;
+}
+.carousel-content-overview img {
+  width: 100%;
+  height: 400px;
+}
+.content-overview {
+  flex: 1;
+  background-color:#ececcd;
+  height: 400px;
+  justify-content: center;
+  padding: 20px;
+  width: 550px;
+}
+.icon-row{
+  display: flex;
+  justify-content: space-between;
+}
+.icon{
+  text-align: center;
+  margin-right: 15px;
+}
+.icon-rate{
+  display: flex;
+  justify-content: space-between;
+}
+.overview-head{
+  font-size: 26px;
+}
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  font-size: 24px;
+}
+
+.left-arrow {
+  left: 0;
+}
+
+.right-arrow {
+  right: 0;
+}
+.overview-text{
+  font-size: 20px;
+}
+.bold{
+  font-weight: bold;
+  font-family: 'Roboto';
+}
+.styled-text{
+  color: rgb(223,135,3);
+  font-family: 'Georgia';
+}
+.overview-btn{
+  height: 40px;
+  width: 120px;
+  background-color: rgb(209, 133, 18);
+  color: white;
+  border-radius: 12px;
+  margin-right: 20px;
+  border: 0px;
+  font-family: 'Georgia';
+}
+.overview-btn:hover{
+  background-color: rgb(99, 61, 4);
+}
+@media screen and (max-width:768px){
+  .iti-container{
+    flex-direction: column;
+    height: auto;
+    width: 100%;
+  }
+  .app-overview{
+    height: auto;
+    margin-right: 0px;
+  }
+  .carousel-container-overview{
+    width: 100%;
+  }
+  .carousel-content-overview img {
+    width: 100%;
+    height: 200px;
+  }
+  .overview-head{
+    font-size: 16px;
+  }
+  .overview-text{
+    font-size: 12px;
+  }
+  .content-overview{
+    width: 100%;
+  }
+  .overview-btn{
+    height: 30px;
+    width: 90px;
+    margin-right: 0px;
+  }
+}

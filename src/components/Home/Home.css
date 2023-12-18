@@ -1,0 +1,141 @@
+.app-container {
+    background-color: white;
+}
+
+.head-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+}
+.custom-btn{
+    text-decoration: none;
+}
+.head{
+    font-family: 'Georgia';
+    font-size: 48px;
+    color: black;
+}
+
+.msg-head {
+    font-family: "Roboto";
+    font-size: 36px;
+    text-align: center;
+}
+
+.msg-description  {
+    font-family: "palatino";
+    text-align: center;
+    font-size: 20px;
+    white-space: initial;
+}
+.description-container{
+    padding: 30px;
+    white-space: initial;
+}
+.btn-container {
+    display: flex;
+    justify-content: center;
+}
+
+#readMoreBtn {
+    background-color: transparent;
+    color: black;
+    text-decoration: none;
+    border: 1px solid brown;
+    height: 40px;
+    width: 120px;
+    font-family: 'Georgia';
+    color: black;
+}
+
+#readMoreBtn:hover {
+    background-color: #c08210;
+    color: white;
+}
+
+.img-container {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.des-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.left {
+    flex: 1;
+}
+
+.right {
+    flex: 1;
+    text-align: end;
+}
+
+.wildlife-img {
+    width: 85%;
+    height: 100vh;
+}
+
+.tanzania-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.image {
+    flex: 1;
+}
+
+.content {
+    flex: 2;
+}
+
+.view-btn-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 30px;
+}
+
+.view-btn-pkg{
+    width: auto;
+}
+
+
+
+@media screen and (max-width:768px) {
+    .head {
+        font-size: 28px;
+        margin-top: 40px;
+    }
+}
+
+@media screen and (max-width:768px) {
+    .wildlife-img {
+        height: 500px;
+        width: 100%;
+        object-fit: cover;
+    }
+}
+
+@media screen and (max-width:768px) {
+    .des-container {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+}
+@media screen and (max-width:768px) {
+    .right{
+        flex: 2;
+    }
+    .left{
+        flex: 1;
+    }
+}

@@ -1,0 +1,45 @@
+
+  
+  .inclusion-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  
+  .left-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  #btn1,
+  #btn2 {
+    margin: 5px;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 10px;
+    width: 100px;
+  }
+  
+  .bullet-container {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    width: 600px;
+    font-family: 'Georgia';
+
+  }
+  
+  .list {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .list li {
+    margin-bottom: 8px;
+    font-size: 14px;
+  }
+
+  

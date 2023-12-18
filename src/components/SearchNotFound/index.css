@@ -1,0 +1,15 @@
+.not-found-container {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: aliceblue;
+}
+.not-found-bg-image{
+    height: 60vh;
+}
+.button-not-found{
+    width: 120px;
+}

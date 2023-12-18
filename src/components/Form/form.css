@@ -1,0 +1,126 @@
+.app{
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  border-radius: 10px;
+  flex-wrap: nowrap;
+}
+.book-img{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  color: orange;
+}
+.otp{
+  margin-left: 30px;
+}
+.blocked-date {
+  color: #999;
+  background-color: red;
+}
+.input-text{
+  font-family: 'Georgia';
+}
+.booking-container{
+  background-color:white;
+  padding: 30px;
+  height: auto;
+}
+
+.booking-form {
+  width: 300px;
+  margin: 0 auto;
+  padding-left: 20px;
+  padding-right: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background-color: white;
+  margin-top: 25px;
+  
+}
+.form-group-phone{
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: row;
+}
+.booking-head{
+  text-align: center;
+}
+
+.form-group {
+  margin-bottom: 10px;
+}
+.form-group-half{
+  width: 170px;
+}
+.form-group-row{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  height: 40px;
+  width: 150px;
+}
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+.half{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-bottom: 10px;
+}
+
+textarea{
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+.btn {
+  width: 100%;
+  padding: 10px 20px;
+  background-color: #3498db;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+}
+.otp-input{
+  width: 130px;
+  margin-right: 10px;
+}
+.otp-btn{
+  width: 100px;
+  padding: 10px 20px;
+  background-color: #3498db;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-right: 10px;
+  text-align: center;
+}
+
+.btn:hover {
+  background-color: #2980b9;
+}
+.blocked-date {
+  color: #999;
+  background-color: red;
+}
+.available-date{
+  background-color: #2980b9;
+}
