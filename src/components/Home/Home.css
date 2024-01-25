@@ -102,12 +102,9 @@
     align-items: center;
     margin: 30px;
 }
-
 .view-btn-pkg{
-    width: auto;
+    width:auto;
 }
-
-
 
 @media screen and (max-width:768px) {
     .head {
@@ -122,6 +119,9 @@
         width: 100%;
         object-fit: cover;
     }
+    #readMoreBtn{
+        width: auto;
+    }
 }
 
 @media screen and (max-width:768px) {
@@ -129,6 +129,9 @@
         display: flex;
         flex-direction: column;
         flex-wrap: wrap;
+    }
+    .view-btn-pkg{
+        width: auto;
     }
 }
 @media screen and (max-width:768px) {

@@ -9,10 +9,10 @@ import Gallery from '../Gallery';
 import SearchOverlay from '../SearchOverlay';
 
 const images= [
-    'https://res.cloudinary.com/dr0vyis3o/image/upload/v1702014327/reveiw-1_f2wpx5.jpg',
-    'https://res.cloudinary.com/dr0vyis3o/image/upload/v1702014327/reveiw-3_ikd8os.jpg',
-    'https://res.cloudinary.com/dr0vyis3o/image/upload/v1702014327/reveiw-2_dbbyrg.jpg',
-    'https://res.cloudinary.com/dr0vyis3o/image/upload/v1702014328/reveiw-4_ulmh6a.jpg'
+    'https://res.cloudinary.com/dl3vc69uw/image/upload/v1704695573/google-4_afchox_sdsayu.jpg',
+    'https://res.cloudinary.com/dl3vc69uw/image/upload/v1704695601/google-3_llrz75_z3kyzp.jpg',
+    'https://res.cloudinary.com/dl3vc69uw/image/upload/v1704695610/google-5_iivjjf_t6ngwc.jpg',
+    'https://res.cloudinary.com/dl3vc69uw/image/upload/v1704695626/google-2_vdbgoh_hwz0pb.jpg'
 ]
 
 function Navbar() {
@@ -36,10 +36,10 @@ function Navbar() {
         setIsOverlayVisible(false);
     }; 
     return ( 
-    <div className='navbar'>
+    <div className='navbar mr-3 ml-3'>
        <Link to='/'> 
        <div className = "logo" >
-        <img src = "https://res.cloudinary.com/dr0vyis3o/image/upload/v1696837379/Transparent_-_Travel_Unbounded-06_1_m692ki.png" alt = "Logo" />
+        <img src = "https://res.cloudinary.com/dl3vc69uw/image/upload/v1704695495/Transparent_-_Travel_Unbounded-06_1_m692ki_jz6wgh.png" alt = "Logo" />
         </div>  
         </Link>
         <div className='nav-right'>
@@ -79,7 +79,7 @@ function Navbar() {
             <NavLink to='/about' className='dest' activeClassName='active'><li className='nav-buttons'> About Us </li></NavLink> 
             <NavLink to='/contact' className='dest' activeClassName='active'><li className='nav-buttons'> Contact Us </li></NavLink> 
             <li><div className='icons-container'>
-           <a href='https://wa.me/6304484048' target='__blank'><div className='nav-icon'><FaWhatsapp size={30}/></div></a> 
+           <a href='https://wa.me/9663579014' target='__blank'><div className='nav-icon'><FaWhatsapp size={30}/></div></a> 
            <a href='https://www.instagram.com/travel_ub/' target='__blank'>
            <div className='nav-icon'><FaInstagram size={30}/></div></a>
            <a href='https://www.facebook.com/travelunboundedcom' target='__blank'>
@@ -90,7 +90,13 @@ function Navbar() {
             </ul> 
             </div> 
             <div className='right-content'>
-                <Gallery images={images}/> 
+                <div className='right-content-flex'>
+                <Gallery images={images}/>
+                <h5 className='mt-5 text-center nav-buttons' style={{color:'white', fontWeight:'bold'}}>Write a review to Scan</h5>
+                <div className='text-center'>
+                <img src='https://res.cloudinary.com/dl3vc69uw/image/upload/v1704695542/Travel_Unbounded-reviews_n74epw_u5cwfn.png' alt='scanner-reviews' className='qr-code'/> 
+                </div>
+                </div>
             </div>
         </div >
         )

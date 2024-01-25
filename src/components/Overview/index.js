@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState,useEffect } from 'react';
 import './overview.css';
 import {Link} from 'react-router-dom'
 import {AiFillCar} from 'react-icons/ai'
@@ -8,6 +8,7 @@ import {FaSafari } from "react-icons/fa";
 
 const Carousel = ({ images,itinerary_details }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
 
   const prevSlide = () => {
     setCurrentIndex((prevIndex) => (prevIndex === 0 ? images.length - 1 : prevIndex - 1));
@@ -16,7 +17,17 @@ const Carousel = ({ images,itinerary_details }) => {
   const nextSlide = () => {
     setCurrentIndex((prevIndex) => (prevIndex === images.length - 1 ? 0 : prevIndex + 1));
   };
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
 
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
 
   return (
     <>
@@ -55,7 +66,7 @@ const Carousel = ({ images,itinerary_details }) => {
         </div>
         <div className='icon-row'>
             <p className='overview-text bold'>{itinerary_details.inr}</p>
-            <Link to ='/form' className='dest'><button type='button' className='overview-btn'>Book Now</button></Link>
+            <Link to ='/form' className='dest'><button type='button' className='overview-btn'>{isMobile ? 'Book' : 'Book Now'}</button></Link>
         </div>
         <div className='icon-row'>
             <p className='overview-text bold'> {itinerary_details.fn}</p>

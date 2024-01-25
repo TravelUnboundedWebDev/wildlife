@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './form.css'
-import { FaMapMarked } from "react-icons/fa";
 import firebase from 'firebase/compat/app';
 import 'firebase/compat/auth';
 import 'firebase/compat/firestore';
@@ -11,6 +10,8 @@ import 'react-phone-number-input/style.css';
 import { toast, Toaster } from "react-hot-toast";
 import { FiX } from 'react-icons/fi';
 import 'react-datepicker/dist/react-datepicker.css';
+import Select from 'react-select'; 
+import {Helmet} from 'react-helmet';
 
 
 const firebaseConfig = {
@@ -26,13 +27,25 @@ if (!firebase.apps.length) {
   firebase.initializeApp(firebaseConfig);
 }
 
-
+const getRelatedOptionsData = (selectedValue) => {
+    const data = {
+      BAN: ["Mysore", "Coorg", "Ooty", "No"],
+      BNDVG: ["Marble rocks Jabalpur", "Kanha", "Khajuraho", "No"],
+      CRT: ["Nainital", "Sattal", "Pangod", "No"],
+      KAB: ["Mysore", "Coorg", "No"],
+      PEN: ["Tadoba", "Ramtek temple", "Nagzira wildlife sanctuary", "NO"],
+      RTR: ["Jaipur", "Jalana", "Udaipur", "Jailsalmer", "No"],
+    };
+    return data[selectedValue] || [];
+  };
 
 const BookingForm = () => {
 
   const [phoneNumber, setPhoneNumber] = useState('');
   const [otp, setOtp] = useState("");
   const [confirmationResult, setConfirmationResult] = useState(null);
+  const [relatedOptions, setRelatedOptions] = useState([]);
+  const [nearestPlaces, setNearestPlaces] = useState([]);
 
   const handleSendOTP = async (e) => {
     e.preventDefault();
@@ -63,6 +76,7 @@ const BookingForm = () => {
     email: '',
     country: '',
     destination: '',
+    addNearestPlace:[],
     date: '',
     adults: '',
     childrens:'',
@@ -74,28 +88,45 @@ const BookingForm = () => {
   const minDate = new Date();
   minDate.setDate(minDate.getDate() + 30);
 
-  const isBlockedDate = (date) => {
-    return date < minDate;
-  };
-  
- 
-
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setFormData({ ...formData, [name]: value });
+
+    if (name === 'destination') {
+      const selectedValue = value;
+      const relatedOptionsData = getRelatedOptionsData(selectedValue);
+      setRelatedOptions(relatedOptionsData);
+      setFormData((prevFormData) => ({
+        ...prevFormData,
+        [name]: selectedValue,
+        addNearestPlace: [],
+      }));
+    } else {
+      setFormData((prevFormData) => ({
+        ...prevFormData,
+        [name]: value,
+      }));
+    }
   };
+  const handleNearestPlacesChange = (selectedOptions) => {
+  const places = selectedOptions ? selectedOptions.map((option) => option.value) : [];
+  setNearestPlaces(places);
+  setFormData((prevFormData) => ({
+    ...prevFormData,
+    addNearestPlace: places,
+  }));
+};
 
   const handleSubmit = async(e) => {
     e.preventDefault();
 
     try {
-      const { name, email, country, destination, date, adults, childrens, duration, callbackTime, queries } = formData;
+      const { name, email, country, destination,addNearestPlace, date, adults, childrens, duration, callbackTime, queries } = formData;
       const response = await fetch('https://formbackend.netlify.app/submit', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
         },
-        body: JSON.stringify({ name, email, country, destination, date, adults, childrens, duration, callbackTime, queries, phoneNumber }),
+        body: JSON.stringify({ name, email, country, destination,addNearestPlace, date, adults, childrens, duration, callbackTime, queries, phoneNumber }),
       });
 
       const data = await response.json();
@@ -106,7 +137,7 @@ const BookingForm = () => {
         email: '',
         country: '',
         destination: '',
-        time:'',
+        addNearestPlace:[],
         date: '',
         adults: '',
         childrens:'',
@@ -115,6 +146,7 @@ const BookingForm = () => {
         queries: '',
       });
       setPhoneNumber('')
+      setNearestPlaces([])
       
     } catch (error) {
       console.error('Error submitting form:', error);
@@ -128,19 +160,24 @@ const BookingForm = () => {
 
   return (
     <>
+    <Helmet>
+      <title>Book Your Wildlife Adventure Now with Travel Unbounded</title>
+      <meta name="description" content="Book now for an unforgettable journey into the heart of the wild. Don't miss out on thrilling safaris and breathtaking encounters" />
+    </Helmet>
     <Toaster toastOptions={{ duration: 5000 }} />
-    <div className="container app">
+    <div className="container-fluid app">
     <div onClick={handleGoBack} style={{ position: 'absolute', top: '10px', right: '10px' }}>
             <FiX size={40}/>
-        </div>
+    </div>
       <div className='book-img'>
-      <FaMapMarked size={40} />
+      <img src='https://res.cloudinary.com/dl3vc69uw/image/upload/v1704695956/Untitled_design_ageva5_je6sjt.png' alt='' className='pug-mark' />
       </div>
       <h2 className='text-center input-text'>Book Your Tour</h2>
-      <p className='text-center input-text mb-5'>Mininum 30 days required to book Game Drives/Safaris</p>
+      <p className='text-center input-text mb-4'>Game drives/Safari-zones subject to availability<br/> <span>Recommend to plan a travel post 30 days</span></p>
       <form onSubmit={handleSubmit}>
+        <div className='container'>
         <div className="row">
-          <div className="col-md-4">
+          <div className="col-12 col-md-4 col-lg-4 col-xl-4">
             <div className="form-group mb-3">
               <input
                 type="text"
@@ -148,7 +185,7 @@ const BookingForm = () => {
                 name="name"
                 value={formData.name}
                 onChange={handleChange}
-                placeholder='Name'
+                placeholder='Name*'
                 required
               />
             </div>
@@ -159,7 +196,7 @@ const BookingForm = () => {
                 name="email"
                 value={formData.email}
                 onChange={handleChange}
-                placeholder='Email'
+                placeholder='Email*'
                 required
               />
             </div>
@@ -170,7 +207,7 @@ const BookingForm = () => {
                 name="country"
                 value={formData.country}
                 onChange={handleChange}
-                placeholder='Country Name'
+                placeholder='Country Name*'
                 required
               />
             </div>
@@ -183,7 +220,7 @@ const BookingForm = () => {
               className="form-control input-text"
               required
             >
-              <option value="" disabled>Select Destination</option>
+              <option value="" disabled>Select Destination*</option>
               <option value="BAN">Bandipur</option>
               <option value="BNDVG">Bandhavgarh</option>
               <option value="CRT">Corbett</option>
@@ -194,6 +231,15 @@ const BookingForm = () => {
               <option value="TAN">Tanzania</option>
             </select>
             </div>
+          <div className="form-group mb-3">
+          <Select
+            isMulti
+            options={relatedOptions.map((option, index) => ({ value: option, label: option }))}
+            value={nearestPlaces.map((place) => ({ value: place, label: place }))}
+            onChange={(selectedOptions) => handleNearestPlacesChange(selectedOptions)}
+            placeholder="Do you want to visit nearest places?"
+          />
+        </div>
               <div className="form-group mt-3 mb-3">
               <input
                 type="number"
@@ -201,23 +247,23 @@ const BookingForm = () => {
                 name="adults"
                 value={formData.adults}
                 onChange={handleChange}
-                placeholder='Number of adults'
+                placeholder='Number of adults*'
                 required
               />
             </div>
-            <div className="form-group mt-3 mb-3">
+            </div>
+          <div className="col-12 col-md-4 col-lg-4 col-xl-4">
+          <div className="form-group mb-3">
               <input
                 type="number"
                 className="form-control input-text"
                 name="childrens"
                 value={formData.childrens}
                 onChange={handleChange}
-                placeholder='Number of children (below 9years)'
+                placeholder='Number of children (below 9years)*'
                 required
               />
             </div>
-            </div>
-          <div className="col-md-4">
             <div className="form-group mb-3">
               <input
                 type="text"
@@ -225,7 +271,7 @@ const BookingForm = () => {
                 name="duration"
                 value={formData.duration}
                 onChange={handleChange}
-                placeholder='Duration of stay/No.of nights'
+                placeholder='Duration of stay/No.of nights*'
                 required
               />
             </div>
@@ -237,9 +283,9 @@ const BookingForm = () => {
                 value={formData.date}
                 min={minDate.toISOString().split('T')[0]}
                 onChange={handleChange}
-                placeholder="Select a date"
-                dateFormat='dd/MM/YYYY'
-                dayClassName={(date) => (isBlockedDate(date) ? 'blocked-date' : '')}
+                placeholder="select Date*"
+                //dateFormat='dd/MM/YYYY'
+                //dayClassName={(date) => (isBlockedDate(date) ? 'blocked-date' : '')}
                 required
               />
             </div>
@@ -251,7 +297,7 @@ const BookingForm = () => {
                 name="callbackTime"
                 value={formData.callbackTime}
                 onChange={handleChange}
-                placeholder='Flexible time to reach out to you'
+                placeholder='Flexible time to reach out to you*'
                 required
               />
             </div>
@@ -262,19 +308,16 @@ const BookingForm = () => {
                 value={formData.queries}
                 onChange={handleChange}
                 placeholder='Message'
-                rows={5}
+                rows={3}
               />
             </div>
             </div>
-          <div className='col-md-4'>
+          <div className='col-12 col-md-4 col-lg-4 col-xl-4'>
             <div className='form-group input-text mb-3'>
               <PhoneInput
-                inputProps={{
-                  type: 'text',
-                }}
                 defaultCountry="IN"
                 value={phoneNumber}
-                placeholder='Enter Contact Number'
+                placeholder='Enter Contact Number*'
                 onChange={(value) => setPhoneNumber(value)} 
                 required
               />
@@ -308,6 +351,7 @@ const BookingForm = () => {
           <button type="submit" className="btn btn-primary input-text">
           Submit
           </button>
+        </div>
         </div>
         </form>
         </div>

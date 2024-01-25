@@ -9,7 +9,7 @@ const NotFound = () => {
   return (
     <div className="not-found-container">
       <img
-        src="https://res.cloudinary.com/dwtsapuyn/image/upload/v1645183805/Notfound_2_lyiwc7.png"
+        src="https://res.cloudinary.com/dl3vc69uw/image/upload/v1704801590/Notfound_2_lyiwc7_inkqfi.png"
         alt="not found"
         className="not-found-bg-image mb-3"
       />

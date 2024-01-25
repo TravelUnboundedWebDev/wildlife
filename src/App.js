@@ -17,6 +17,8 @@ import Package4 from './components/Package4'
 import Package5 from './components/Package5'
 import Package6 from './components/Package6'
 import Package7 from './components/Package7'
+import Package8 from './components/Package8'
+import Package9 from './components/Package9'
 import About from './components/About'
 import BlogDetails from './components/BlogDetails'
 import ScrollToTop from './components/ScrollToTop'
@@ -51,6 +53,8 @@ function App(){
         <Route exact path='/packages/ranthambore' Component={Package5} />
         <Route exact path='/packages/bandhavgarh' Component={Package6} />
         <Route exact path='/packages/kenya' Component={Package7} />
+        <Route exact path='/packages/corbett/2' Component={Package8} />
+        <Route exact path='/packages/mara' Component={Package9} />
         <Route exact path='/blog/:id' Component={BlogDetails} />
         <Route exact path='/form' Component={Form}/>
         <Route exact path='privacy' Component={Privacy}/>

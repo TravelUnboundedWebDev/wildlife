@@ -7,7 +7,7 @@ const Terms = () => {
             <h2 className='text-center mt-5 mb-5'>Terms and Conditions</h2>
             <div className='container'>
                 <div className='row'>
-                    <div className='col-12'>
+                    <div className='col-12 col-md-12 col-lg-12 col-xl-12'>
                         <p className='mb-3'>The Website Owner, including subsidiaries and affiliates (“Website” or
                         “Website Owner” or “we” or “us” or “our”) provides the information contained
                         on the website or any of the pages comprising the website (“website”) to

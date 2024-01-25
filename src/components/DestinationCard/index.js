@@ -9,7 +9,7 @@ const DestinationCard = () => {
   const [cards, setCards] = useState([]);
   const [loading, setLoading] = useState(true);
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
-
+  
   useEffect(() => {
     const handleResize = () => {
       setIsMobile(window.innerWidth <= 768);
@@ -33,7 +33,7 @@ const DestinationCard = () => {
         setLoading(false);
       }
     };
-    fetchData();
+    fetchData()
   }, []);
 
   return (
@@ -44,11 +44,10 @@ const DestinationCard = () => {
       <div className="package-container">
         {cards.map((card) => (
           <div key={card.id} className="package-card mt-4">
-            <img src={card.image} alt='' className='card-img'/>
+            <img src={card.image} alt='' className='card-img mb-3'/>
             <h4 className='title mb-3'>{card.name}</h4>
-            <h4 className='title-date mb-3'> {card.dates}</h4>
+            <h5 className='title-rate bold mb-3'>{card.days}</h5>
             <h5 className='title-rate bold mb-3'>{card.price}</h5>
-            <h5 className='title-rate bold mb-3'>{card.fn}</h5>
             <div className='btn-container-card'>
             <Link to={card.link} className='blogs-link'>
             <button className="view-button-card">{isMobile ? 'View' : 'View Itinerary'}</button></Link>
@@ -57,8 +56,8 @@ const DestinationCard = () => {
           </div>
         ))}
       </div>
-      )};
+      )}
     </div>
-  );
+  )
 };
 export default DestinationCard;

@@ -5,14 +5,17 @@ import Footer from '../Footer';
 import './packages.css'
 import {Link} from 'react-router-dom';
 import { IoMdHome } from "react-icons/io";
-
-
+import {Helmet} from 'react-helmet';
 const HotSellingPackages = () => {
   return (
     <>
+    <Helmet>
+      <title>Best Wildlife Packages by Travel Unbounded</title>
+      <meta name="description" content="Discover extraordinary wildlife with Travel Unbounded. Our expert guides lead tailor-made safari tours, promising moments of awe and wonder. Book now for an immersive journey into nature's wonders." />
+    </Helmet>
     <Navbar/>
     
-    <img src='https://res.cloudinary.com/dr0vyis3o/image/upload/v1701163739/Tiger_cub_Bandhavgarh_wo11wx.jpg' alt='' className='destination-img-package' />
+    <img src='https://res.cloudinary.com/dl3vc69uw/image/upload/v1704696544/Tiger_cub_Bandhavgarh_wo11wx_dpck4o.jpg' alt='' className='destination-img-package' />
        
     <h1 className='text-center blog-head mt-5'>Hot Selling Packages</h1>
     <div className="destinations-container">

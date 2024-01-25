@@ -10,7 +10,7 @@
     height: 400px;
     width: 100%;
     object-fit: cover;
-    text-align: center;
+    background-position: center;
     margin-top:20px;
     margin-bottom:20px;
 }

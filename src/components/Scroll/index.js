@@ -26,7 +26,7 @@ const ScrollToTopButton = () => {
   return (
     <>
       {isVisible && (
-        <BsArrowUpSquareFill size={30} onClick={scrollToTop} style={{ position: 'fixed', bottom: '10px', left: '20px', transform:'transform(50%,50%)' }} />
+        <BsArrowUpSquareFill size={30} onClick={scrollToTop} style={{ position: 'fixed', bottom: '40px', right: '20px', transform:'transform(50%,50%)' }} />
       )}
     </>
   );

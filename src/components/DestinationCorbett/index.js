@@ -6,24 +6,26 @@ import { BsArrowDownSquareFill } from "react-icons/bs";
 import Overview from '../Overview'
 import Navbar from '../Navbar'
 import Footer from '../Footer'
+import Helmet from 'react-helmet'
 
 
 const images = [
-  'https://res.cloudinary.com/dr0vyis3o/image/upload/v1696500762/Corbett_Gallery_1_nnsrcv.jpg',
-  'https://res.cloudinary.com/dr0vyis3o/image/upload/v1696500781/Corbett_Gallery_2_srae9c.jpg',
-  'https://res.cloudinary.com/dr0vyis3o/image/upload/v1696500788/Corbett_Gallery_5_ctyuzg.jpg',
-  'https://res.cloudinary.com/dr0vyis3o/image/upload/v1696500789/Corbett_Gallery_4_xyjlfz.jpg',
-  'https://res.cloudinary.com/dr0vyis3o/image/upload/v1696500791/Corbett_Gallery_3_gwiwfl.jpg',
+  'https://res.cloudinary.com/dl3vc69uw/image/upload/v1704705736/group_photo_bmmbzh_fwg1c9.jpg',
+  'https://res.cloudinary.com/dl3vc69uw/image/upload/v1704705752/Corbett_Gallery_1_nnsrcv_kt6fii.jpg',
+  'https://res.cloudinary.com/dl3vc69uw/image/upload/v1704705793/Corbett_Gallery_2_srae9c_k5hjqg.jpg',
+  'https://res.cloudinary.com/dl3vc69uw/image/upload/v1704705818/Corbett_Gallery_5_ctyuzg_v7ea7i.jpg',
+  'https://res.cloudinary.com/dl3vc69uw/image/upload/v1704705825/Corbett_Gallery_4_xyjlfz_djxfac.jpg',
+  'https://res.cloudinary.com/dl3vc69uw/image/upload/v1704705843/Corbett_Gallery_3_gwiwfl_ppnkom.jpg',
 ]
 
-const inclusions = ["Full board stay at a boutique resort at either the forest rest house or at a resort at Ramnagar on twin sharing basis","Game drives","Internal transfers by Air conditioned Vehicle","National park permit & Entry fees"];
-const exclusions = ["Airfare or train fare from home destination to nearest airport or railway station","Expenses of personal nature","Any still or video camera fees","GST","Any meals, services not mentioned in the Inclusion section"];
+const inclusions = ["Full board stay at either the forest rest house or at a resort at Ramnagar","Game drives","National park permit & Entry fees"];
+const exclusions = ["Airfare or train fare from home destination to nearest airport or railway station","Expenses of personal nature","Any still or video camera fees","GST","Any meals, services not mentioned in the Inclusions section","Internal transfers by Air conditioned Vehicle"];
 
 const itinerary_details =
         {
         name:'Corbett',
-        inr:'Indian Nationals - ₹15,000',
-        fn:'Foreign Nationals - $350'
+        inr:'Indian Nationals - ₹6,800',
+        fn:'Foreign Nationals - $125'
         }
   
 
@@ -49,24 +51,33 @@ const DestinationBandipur = () => {
 
     return(
     <>
+    <Helmet>
+      <title>Jim Corbett National Park: Untamed Beauty and Wildlife Wonders</title>
+      <meta name="description" content="Explore the wilderness of Corbett National Park. Encounter diverse wildlife, embark on thrilling safaris, and experience nature's grandeur in the heart of India." />
+    </Helmet>
     <div ref={sec0}>
     <Navbar/>
     </div>
-    <div className='video-banner d-md-block' ref={sec1}>
+    <div className='video-banner d-none d-md-block' ref={sec1}>
     <video autoPlay loop controls muted
-      src='https://res.cloudinary.com/dr0vyis3o/video/upload/v1696835070/CRT_Final_2_a10w02_czbxgu.mp4'
+      src='https://res.cloudinary.com/dl3vc69uw/video/upload/v1704705622/CRT_Final_2_a10w02_czbxgu_xs4yod.mp4'
       type='video/mp4'>
     </video>
     <div className='button-banner'>
     <BsArrowDownSquareFill size={30} onClick={()=>scrollHandler(sec2)} style={{color:'white'}}/> 
     </div>
     </div>
+
+    <div className='video-banner d-sm-block d-md-none' ref={sec1}>
+    <img src='https://res.cloudinary.com/dl3vc69uw/image/upload/v1704705642/Corbett_banner_image_becmes_lozswl.jpg' alt='Kenya' className='destination-img' />
+    </div>
     
     <div className="container" ref={sec2}>
       <div className="row">
-        <div className="col-12 data-container mt-3">
+        <div className="col-12 col-md-12 col-lg-12 col-xl-12">
+        <div className="it-container data-container mt-3">
                 <h2 className='bold mb-3 package-head'>Corbett - The Land of the roar and trumpet</h2>
-                <p className='dest-text'>Away from the crowd packed like sardines, nestling in the foot hills of the mighty Himalayas,
+                <p className='dest-text'>Away from the crowd packed like sardines, nestling in the foothills of the mighty Himalayas,
                 lies this beautiful peace of earth called Corbett. River Ramganga quietly flows cutting this valley into two.
                 The upper regions boast of thick vegetation while the lower grass lands sway gently with the cool northerly
                 winds.</p>
@@ -87,13 +98,14 @@ const DestinationBandipur = () => {
             </div>
       </div>
     </div>
+    </div>
 
     <div className="container" ref={sec3}>
       <div className="row">
-        <div className="col-12">
+        <div className="col-12 col-md-12 col-lg-12 col-xl-12">
           <div className='it-container data-container'>
             <h2 className='bold mb-3 package-head'>Getting there</h2>
-            <img src='https://res.cloudinary.com/dr0vyis3o/image/upload/v1698994446/7_apfn5m.png' alt='' className='weather-img'/>      
+            <img src='https://res.cloudinary.com/dl3vc69uw/image/upload/v1704705660/7_apfn5m_daydox.png' alt='' className='weather-img'/>      
           <div className='scroll-container'>
           <BsArrowDownSquareFill size={30} onClick={()=>scrollHandler(sec4)}/> 
             </div>
@@ -103,9 +115,9 @@ const DestinationBandipur = () => {
     </div>
     <div className="container" ref={sec4}>
       <div className="row">
-        <div className="col-12">
+        <div className="col-12 col-md-12 col-lg-12 col-xl-12">
           <div className='it-container data-container'>
-            <img src='https://res.cloudinary.com/dr0vyis3o/image/upload/v1698995433/8_wpjkp7.png' alt='' className='weather-img'/>      
+            <img src='https://res.cloudinary.com/dl3vc69uw/image/upload/v1704705676/8_wpjkp7_pn2zvi.png' alt='' className='weather-img'/>      
           <div className='scroll-container mt-3'>
         <BsArrowDownSquareFill size={30} onClick={()=>scrollHandler(sec5)}/>       
             </div>
@@ -115,7 +127,7 @@ const DestinationBandipur = () => {
     </div>
     <div className="container" ref={sec5}>
       <div className="row">
-        <div className="col-12">
+        <div className="col-12 col-md-12 col-lg-12 col-xl-12">
           <div className='it-container data-container mt-5'>
           <h2 className='bold mb-3 package-head'>VISA formalities</h2>
                 <p className='dest-text'>The vast majority of visitors from abroad require a visa for India. There are different types of visa
@@ -135,21 +147,22 @@ const DestinationBandipur = () => {
     
     <div className="container" ref={sec6}>
       <div className="row">
-        <div className="col-12">
+        <div className="col-12 col-md-12 col-lg-12 col-xl-12">
           <div className='it-container data-container mt-5'>
           <h2 className='bold mb-3 package-head'>Points of interest - Corbett</h2>
                 <p className='dest-text'><b>1.Corbett Tiger Reserve</b> - CTR is dived into many zones and one needs to book and get different
-                permits for different zones. The landscapes varies from grass lands to rock out crops and mighty
-                rivers to small streams. Dhikala zone has a lovely guests house build inside the core zone with
+                permits for different zones. The landscapes vary from grasslands to rock out crops and mighty
+                rivers to small streams. Dhikala zone has a lovely guest house built inside the core zone with
                 basic facilities. This is a place where one gets to experience the Indian wildlife. Bijrani and Jhirna
                 are other zones where one can stay at the feeder town called Ramanagar and do the jungle drives.</p>
-                <p className='dest-text'>Safaris are also booked by the resort where you would be staying or your tour operator&#39;s can
+                <p className='dest-text'>Safaris are also booked by the resort where you would be staying or your tour operators can
                 assist in your safari bookings.</p>
-                <p className='dest-text'>Online safari permits are also available on this link</p>
-                <p className='dest-text'><b>2.Corbett Museum </b>- Guests staying at Ramnagar should visit the home where the legend lived. It
-                is just a 35 minutes. It is in a place called Kaladhungi. One can live the life what he lived and see
+               
+                <p className='dest-text'><b>2.Corbett Museum </b>- Guests staying at Ramnagar should visit the home where the legend lived.
+                It is in a Kaladhungi and just 35 minutes away. One can experience the life he lived and see
                 what he did for the village. The house has been maintained very well and still reverberates with his
                 memories. The visit to this place is really a spiritual experience.</p>
+                
                 <p className='dest-text'><b>3.Ramnagar Market </b>- While you stay at the Ramnagar town, you should visit the market. But be
                 ready to face the traffic, narrow roads and the blaring horns. Buzzing with activities , this market
                 serves every one around this place. This is the place to buy everything from vegetables, fruits
@@ -164,10 +177,10 @@ const DestinationBandipur = () => {
     </div>
     <div className="container" ref={sec7}>
       <div className="row">
-        <div className="col-12">
+        <div className="col-12 col-md-12 col-lg-12 col-xl-12">
           <div className='it-container data-container'>
             <h2 className='bold package-head'>Weather at Corbett</h2>
-            <img src='https://res.cloudinary.com/dr0vyis3o/image/upload/v1696502426/Corbett_fwjlc2.jpg' alt='' className='weather-img'/>
+            <img src='https://res.cloudinary.com/dl3vc69uw/image/upload/v1704705700/Corbett_fwjlc2_izlrr6.jpg' alt='' className='weather-img'/>
             <div className='scroll-container'>
             <BsArrowDownSquareFill size={30} onClick={()=>scrollHandler(sec8)}/> 
             </div>        
@@ -178,7 +191,7 @@ const DestinationBandipur = () => {
 
     <div className="container data-container it-container mb-5" ref={sec8}>
       <div className="row">
-    <div class="col-12 col-md-6">
+    <div class="col-12 col-md-6 col-lg-6 col-xl-6">
       <h3 class="inc-head mb-5 mt-5">Inclusions</h3>
         <ul className='list-group list dest-text'>
           {inclusions.map((item, index) => (
@@ -186,7 +199,7 @@ const DestinationBandipur = () => {
           ))}
         </ul>
     </div>
-    <div class="col-12 col-md-6">
+    <div class="col-12 col-md-6 col-lg-6 col-xl-6">
       <h3 class="exc-head mb-5 mt-5">Exclusions</h3>
         <ul className='list-group list dest-text'>
           {exclusions.map((item, index) => (
@@ -202,7 +215,7 @@ const DestinationBandipur = () => {
 
     <div className="container" ref={sec9}>
       <div className="row">
-    <div className='col-12'>
+    <div className='col-12 col-md-12 col-lg-12 col-xl-12'>
           <div className='it-container data-container' >
           <Overview images={images} itinerary_details={itinerary_details}/>
       <div className='scroll-container mb-5'>

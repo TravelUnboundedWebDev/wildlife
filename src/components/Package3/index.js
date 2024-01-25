@@ -1,26 +1,38 @@
 import {React,useState} from 'react'
 import Navbar from '../Navbar'
-import {BsArrowLeftSquareFill} from "react-icons/bs";
 import Footer from '../Footer'
+import {Link} from 'react-router-dom'
 import './p3.css'
+import {Helmet} from 'react-helmet'
 
 const images = [
-  "https://res.cloudinary.com/dr0vyis3o/image/upload/v1701154657/Male_Tiger_Pench_ebn7xv.jpg",
-  "https://res.cloudinary.com/dr0vyis3o/image/upload/v1701154517/Sambhar_Pench_z8ufck.jpg",
-  "https://res.cloudinary.com/dr0vyis3o/image/upload/v1701154455/Pench_Tigers_me5twm.jpg",
-  "https://res.cloudinary.com/dr0vyis3o/image/upload/v1701154454/Pench_villa_2_kz5d8c.jpg",
-  "https://res.cloudinary.com/dr0vyis3o/image/upload/v1701154457/Pench_Villa_3_q6cdvf.jpg",
-  "https://res.cloudinary.com/dr0vyis3o/image/upload/v1701154457/Pench_villa_vgwsl4.jpg",
-  "https://res.cloudinary.com/dr0vyis3o/image/upload/v1701154461/Pench_Villa_4_nycgpl.jpg",
-  "https://res.cloudinary.com/dr0vyis3o/image/upload/v1701154635/group_photo_bmmbzh.jpg"
+  "https://res.cloudinary.com/dl3vc69uw/image/upload/v1704709998/Sambhar_Pench_z8ufck_swit48.jpg",
+  "https://res.cloudinary.com/dl3vc69uw/image/upload/v1704709980/Male_Tiger_Pench_ebn7xv_xwckjy.jpg",
+  "https://res.cloudinary.com/dl3vc69uw/image/upload/v1704710023/Pench_Tigers_me5twm_k9zfeb.jpg",
+  "https://res.cloudinary.com/dl3vc69uw/image/upload/v1704710037/Pench_villa_2_kz5d8c_ogb427.jpg",
+  "https://res.cloudinary.com/dl3vc69uw/image/upload/v1704796926/Pench_Villa_3_q6cdvf_scwqvk.jpg",
+  "https://res.cloudinary.com/dl3vc69uw/image/upload/v1704796939/Pench_villa_vgwsl4_y9c4re.jpg",
+  "https://res.cloudinary.com/dl3vc69uw/image/upload/v1704796967/Pench_Villa_4_nycgpl_pthhyq.jpg",
+  "https://res.cloudinary.com/dl3vc69uw/image/upload/v1704796994/group_photo_bmmbzh_mfjyfu.jpg"
 ]
 
-const inclusions=["Pick up from Nagpur airport and drop back to Nagpur airport by Innovas. 4 guests per car.",
-      "Safaris as mentioned in the itinerary by Gypys","Meals as mentioned within brackets","Stay at Gajraj villa rooms as mentioned in the itinerary on twin or double sharing basis"]
-  
-  const exclusions=["Airfare or train fare to Nagpur and return from your home stations",
-      "Any personal or medical expenses","GST of INR 450 per person","Anything other than mentioned in the Inclusions section"]
-
+const inclusions=
+      ["4N full board accommodation - on twin sharing basis.",
+      "Morning & Evening safaris during stay on exclusive use of  jeeps",
+      "Driver and guide fees.",
+      "All Park entry fees, accommodation on a twin sharing basis and taxes."]
+     
+  const exclusions=
+      ["Any Airfare or Train fare from Home/Base locations or returns. Internal transfers",
+      "Any type of drinks like mineral water & alcoholic beverages during journey,safari drives or at the camps/hotel/guest houses etc.",
+      "Any tips paid",
+      "Any medical expenses in case of emergencies",
+      "Camera fees or Video Camera fees as levied by the forest department",
+      "The services of Vehicles is not included on leisure days and after finishing the safari drives as per the itinerary given.",
+      "Any type of personal insurance.",
+      "Any medical emergencies",
+      "Anything not mentioned above in the cost include section."]
+    
 const Package3 = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -31,15 +43,17 @@ const Package3 = () => {
   const nextSlide = () => {
     setCurrentIndex((prevIndex) => (prevIndex === images.length - 1 ? 0 : prevIndex + 1));
   };
-  const handleBack =() => {
-    window.history.back();
-  }
+  
     return(
         <>
+        <Helmet>
+          <title>Pench Tiger Reserve Expedition: 4 Days in the Jungle Book-Inspired Paradise</title>
+          <meta name="description" content="Experience the magic of the 'Jungle Book' at Pench Tiger Reserve on a 4-day adventure. Uncover the inspiration behind the famous tale. Book now for a captivating wildlife retreat!" />
+        </Helmet>
         <Navbar/>
         <div className='container'>
             <div className='row'>
-            <div className='col-12'>
+            <div className='col-12 col-md-12 col-lg-12 col-xl-12'>
             <div className='data-container-package'>
             <h1 className='mb-5 mt-5 blog-head'>Journey to the place that inspired the famous , ‘Jungle Book’ - Pench Tiger reserve</h1>
             <h3 className='mb-3 package-head'>Overview:</h3>
@@ -56,7 +70,7 @@ const Package3 = () => {
         </div>
     <div className="container mt-5">
     <div className='row carousel-container-package'>
-    <div className='col-12'>
+    <div className='col-12 col-md-12 col-lg-12 col-xl-12'>
       <button className="arrow left-arrow-package" onClick={prevSlide}>
         &lt;
       </button>
@@ -71,7 +85,8 @@ const Package3 = () => {
       </div>
         <div className='container'>
             <div className='row'>
-            <div className='col-12 list-group data-container-package' style={{width:'100%'}}>
+            <div className='col-12 col-md-12 col-lg-12 col-xl-12'>
+            <div className='list-group data-container-package' style={{width:'100%'}}>
             <h3 className='mb-5 mt-5 package-head'>Short Itinerary</h3>
             <details className=' list-group-item list-style'> <summary><b>Day-1</b></summary>
             <hr/>
@@ -109,24 +124,41 @@ const Package3 = () => {
         </div>
         </div>
         </div>
+        </div>
         <div class="data-container-package mb-5 mt-5">
         <div class="container">
             <div class="row">
-                <div class="col-12 col-md-6 mb-5">
-                    <h3 class="mb-5 mt-5 package-head">Payment Methods</h3>
+                <div class="col-12 col-md-6 col-lg-6 col-xl-6 mb-5">
+                    <h3 class="mb-3 mt-5 package-head">Cost - 4N/5D</h3>
                     <ul className='list list-style'>
-                        <li>Cost per person on twin sharing basis, Ex Nagpur -
-                            For stay at Gajraj villa property - INR <span className='number'>39593/-</span></li>
-                        <li>Single occupancy would be an additional 30% of the above cost</li>
+                        <li>Cost per couple - INR <span className='number'>71,995/-</span></li>
+                        <li>Cost per couple and a kid aged below 9 years- INR <span className='number'>81,675/-</span></li>
+                        <li>Cost for a single person traveling - INR <span className='number'>1,12,530/-</span></li>
+                    </ul>
+                    <h3 class="mb-3 mt-5 package-head">Cost - 3N/4D</h3>
+                    <p className='list-style'>(3Nights tour guests would have only 4 safaris, that is 2 on Day 2 & 2 on Day 3. Day 4 after breakfast they would have to check out.)</p>
+                    <ul className='list list-style'>
+                        <li>Cost per couple - INR <span className='number'>51,425/-</span></li>
+                        <li>Cost per couple and a kid aged below 9 years- INR <span className='number'>58,685/-</span></li>
+                        <li>Cost for a single person traveling - INR <span className='number'>79,255/-</span></li>
                     </ul>
                 </div>
-                <div class="col-12 col-md-6">
+                <div class="col-12 col-md-6 col-lg-6 col-xl-6">
                     <h3 class="mb-5 mt-5 package-head">Payment Terms</h3>
                     <ul className='list list-style'>
                     <li>100% of the tour cost to be paid at the time of booking</li>
                     </ul>
+                    <h3 class="mb-5 mt-5 package-head">Things to Note</h3>
+                    <ul className='list list-style'>
+                        <li>Aadhar card soft copy to be sent at the time of booking</li>
+                        <li>Both the room property and Villa property are owned by Gajraj resorts. The villa property is highly recommended. <a href='https://thegajraj.com/' target='__blank'>See Details</a></li>
+                        <li>No refund would be entertained from the forest department on safari permits if tour is cancelled after booking</li>
+                        <li>Balance refund would be passed on as credit only and can be used for your future trips through Travel Unbounded World Pvt Ltd to Pench tiger reserve</li>
+                        <li>No name additions or changes allowed after booking the tour</li>
+                        <li>100% of the tour cost required to confirm the seat</li>
+                    </ul>
                 </div>
-                <div class="col-12 col-md-6 mb-5">
+                <div class="col-12 col-md-6 col-lg-6 col-xl-6 mb-5">
                     <h3 class=" mt-5 mb-5 package-head">
                        Bank Details
                     </h3>
@@ -137,25 +169,23 @@ const Package3 = () => {
                         <p className='list-style'>Account No : <span className='number'>50200012940675</span></p>
                         <p className='list-style'>IFSC : <span className='number'>HDFC0000075</span></p>
                 </div>
-                <div class="col-12 col-md-6">
+                <div class="col-12 col-md-6 col-lg-6 col-xl-6">
                     <h3 class="mb-5 mt-5 package-head">Cancellation Policy</h3>
                     <ul className='list list-style'>
-                        <li>50% refund would be given as credit to travel on future trip to Pench if cancelled on or before
-                        60 days of travel</li>
-                        <li>No refund if trip is cancelled on or before 59 days before the tour dates.</li>
+                        <li>50% of the stay costs on or before 60 days to the tour ( amount would be given only as credit which can be used for future travel with Travel Unbounded World pvt Ltd to Pench only )</li>
+                        <li>No refund of the tour cost for any cancellations between 45 days to the day of tour</li>
                     </ul>
                 </div>
 
                 <div class="col-12 col-md-6">
-                    <h3 class="inc-head mb-5 mt-5">Inclusions</h3>
+                    <h3 class="inc-head mb-5 col-lg-6 col-xl-6 mt-5">Inclusions</h3>
                     <ul className='list-group list list-style'>
                       {inclusions.map((item, index) => (
                       <li key={index} className='list-group-item'>{item}</li>
                       ))}
                     </ul>
                 </div>
-
-                <div class="col-12 col-md-6">
+                <div class="col-12 col-md-6 col-lg-6 col-xl-6">
                     <h3 class="exc-head mb-5 mt-5">Exclusions</h3>
                     <ul className='list-group list list-style'>
                     {exclusions.map((item, index) => (
@@ -163,15 +193,25 @@ const Package3 = () => {
                     ))}
                     </ul>
                 </div>
-                
-                <div class="col-12 col-md-12 text-center">
-                    <h3 class="mb-5 mt-5 package-head">Contact</h3>
-                    <p className='list-style'>ck@travelunbounded.com - <span className='number'>+91 9845090014</span> - Chandru</p>
-                    <p className='list-style'>sk@travelunbounded.com - <span className='number'>+91 9739255255</span> - Suresh</p>
-                    <p className='list-style'>sg@travelunbounded.com - <span className='number'>+91 9884023028</span> - Supratik Gosh</p>
+                <div class="col-12 col-md-12 col-lg-12 col-xl-12">
+                    <h3 class="mb-5 mt-5 package-head">Terms and conditions</h3>
+                    <ul className='list list-style'>
+                        <li>Travel Unbounded World  Pvt Ltd is not responsible for any personal losses of the guests during the trip</li>
+                        <li>Travel Unbounded World  Pvt Ltd is not responsible for any damages to the property caused by the guests during travel and the cost needs to be borne by the guest</li>
+                        <li>60% of tour cost as advance 90 days prior to the travel dates</li>
+                        <li>Balance 40% of the tour cost 60 days prior to the travel dates.</li>
+                        <li>The quote should not be shared wide mail or verbally to any other tour company.</li>
+                        <li>Travel Unbounded World  Pvt Ltd would have the right to modify , postpone or cancel the trip. In this case 100% refund would be given to the guests</li>
+                        <li>No refund on the safari would be given in case of the guests cancelling the tour after confirming his/her seat.</li>
+                        <li>Resort/hotel cancellation policy would be applicable as per their policies</li>
+                        <li>No refund would be given on any cancelations for this tour becouse of the special price quoted.</li>
+                        <li>Kindly refer to the Private Policy page <a href='https://travelunbounded.in/privacy'>Check</a> for further clauses</li>
+                        <li>Safaris would be allocated in different zones as per avalability</li>
+                    </ul>
                 </div>
+                
                 <div className='text-center mt-5'>
-                <BsArrowLeftSquareFill size={30} onClick={handleBack}/>
+                <Link to='/form'> <button type='button' className='book-btn'>Book Now</button></Link>
                 </div>
             </div>
         </div>

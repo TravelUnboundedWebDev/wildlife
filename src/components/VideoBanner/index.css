@@ -26,6 +26,12 @@ video {
   @media screen and (max-width:768px){
     .banner-text{
         font-size: 12px;
+        font-family: 'Blackadder ITC';
     }
-    
+    .video-banner{
+        height: 80vh;
+    }
+    video{
+        height: 80vh;
+    }
   }

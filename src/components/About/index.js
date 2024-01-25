@@ -3,20 +3,24 @@ import Footer from '../Footer'
 import Navbar from '../Navbar'
 import {Link} from 'react-router-dom';
 import { IoMdHome } from "react-icons/io";
+import {Helmet} from 'react-helmet';
 
 import './about.css'
 
 function About() {
     return(
         <>
+        <Helmet>
+            <title>About Us | Travel Unbounded</title>
+            <meta name="description" content="2014 - Founded by K.Chandrashekar, the journey started at a cafe in Bangalore as a proprietary firm. Served 100 Nature loving individuals by designing customised itineraries to various parks in India and Africa." />
+        </Helmet>
         <Navbar/>
         <div>
-            <img src='https://res.cloudinary.com/dr0vyis3o/image/upload/v1701253799/About_Us_qktlbq.png' alt='' className='about-img' />
+            <img src='https://res.cloudinary.com/dl3vc69uw/image/upload/v1704696930/About_Us_1920_x_1080_px_n8r8i5_gx013v.png' alt='about' className='about-img' />
         </div>
-        <div className="container mt-5 mb-5">
-            <h1 className="about-head text-center package-head">About Us</h1>
+        <div className="about-container mt-5 mb-5">
             <div className="left mb-3">
-                <h3 className="about-head mt-5 mb-5 package-head">Our Visions</h3>
+                <h3 className="about-head mt-5 mb-3 package-head">Our Visions</h3>
                 <p className="about-text">I am sure you would love to know more about us!! We are just like you, a set of Nature loving
             people.</p>
                 <p className="about-text">To make you and your friends & family embark on some of the most unforgettable wilderness
@@ -27,7 +31,7 @@ function About() {
                 Nature for our future.</p>
             </div>
             <div className="left mb-3">
-                <h3 className="about-head mb-5 mt-5 package-head">Our Journey</h3>
+                <h3 className="about-head mb-3 mt-5 package-head">Our Journey</h3>
                 <p className="about-text">2014 - Founded by K.Chandrashekar , the journey started at a cafe in Bangalore as a proprietary
                 firm. Served 100 Nature loving individuals by designing customised itineraries to various parks in
                 India and Africa.</p>
@@ -53,13 +57,13 @@ function About() {
                 Wilderness holidays.</p>
             </div>
             <div className="left">
-                <h3 className="about-head mb-5 mt-5 package-head">Our goal for future</h3>
+                <h3 className="about-head mb-3 mt-5 package-head">Our goal for future</h3>
                 <p className="about-text">Our goal is to expand our expertise into the resorts/camp space, completely digitalise the
                 wilderness holiday bookings, make it very easy for guests like you to travel and explore our World,
                 get up close with Nature, enjoy your journeys and Celebrate Life.</p>
             </div>
             <div className="left">
-                <h3 className="about-head mb-5 mt-5 package-head">Meet our core team</h3>
+                <h3 className="about-head mb-3 mt-5 package-head">Meet our core team</h3>
                 <h5 className="mb-3 package-head">K.CHANDRA SHEKAR</h5>
                 <p className="about-text">An ardent traveller and an award winning wildlife photographer. Founded this Co and now a part
                 of this wonderful, like minded people who just want you to travel and celebrate life. Has a rich

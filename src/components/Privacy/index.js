@@ -8,7 +8,7 @@ const Privacy =() => {
             <h2 className='text-center mt-5 mb-5'>Privacy Policy</h2>
             <div className='container'>
                 <div className='row'>
-                    <div className='col-12'>
+                    <div className='col-12 col-md-12 col-lg-12 col-xl-12'>
                         <p className='mb-3'>We are committed to ensuring that your privacy is protected. Should we ask
                         you to provide certain information by which you can be identified when using
                         this website, and then you can be assured that it will only be used in

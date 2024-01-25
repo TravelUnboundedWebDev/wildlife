@@ -7,7 +7,7 @@
     height: auto;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: center;
 
 }
 .btn-flex{
@@ -60,7 +60,15 @@
     width: 60%;
     height: auto;
     object-fit: cover;
-    margin-right: 20px;
+  }
+  .contact-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  .contact-list{
+    display: flex;
+    flex-direction: column;
   }
   @media screen and (max-width:768px) {
     .carousel-container-package{
@@ -74,5 +82,14 @@
     }
     .right-arrow-package{
         right: 5%;
+    }
+    .carousel-content-package{
+      width:100%
+    }
+    .contact-container{
+      flex-direction: column;
+    }
+    .contact-list{
+      margin-bottom: 30px;
     }
   }

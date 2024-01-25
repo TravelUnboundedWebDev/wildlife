@@ -1,4 +1,4 @@
-.container {
+.about-container {
     background-color: white;
     margin-left: 100px;
     margin-right: 100px;
@@ -41,17 +41,20 @@
 
 .about-img{
     height: 90vh;
-    width: 100vw;
-    object-fit: fill;
+    width: 100%;
+    object-fit: contain;
 }
 
 
 @media screen and (max-width:756px) {
-    .container{
+    .about-container{
         margin-left: 20px;
         margin-right: 20px;
     }
-    .aboout-img{
+    .about-img{
         height: 50vh;
+    }
+    .tag{
+        font-size: 18px;
     }
 }

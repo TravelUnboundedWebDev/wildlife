@@ -46,7 +46,7 @@
     height: 100%;
     background: #F5F5DC;
     background-position: center;
-    background-image: url('https://res.cloudinary.com/dr0vyis3o/image/upload/v1702465578/eagle_ebdlcp.jpg');
+    background-image: url('https://res.cloudinary.com/dl3vc69uw/image/upload/v1704695449/eagle_ebdlcp_t3xchz.jpg');
     display: flex;
     justify-content: space-evenly;
     align-items: center;
@@ -62,11 +62,19 @@
 }
 .right-content {
     width: 450px;
-    height: 250px;
+    height: 400px;
     display: flex;
     justify-content: center;
     margin: 30px;
     padding: 10px;
+}
+.qr-code{
+    height: 100px;
+    width:100px
+}
+.right-content-flex {
+    display: flex;
+    flex-direction: column;
 }
 .menu {
     padding: 20px;

@@ -1,6 +1,7 @@
 .weather-img{
     height: 80vh;
-    width: 80vw;
+    width: 80%;
+    object-fit: fill;
 }
 
 button:hover{
@@ -14,8 +15,6 @@ button:hover{
 }
 
 .it-container{
-    height: 100vh;
-    width: 100%;
     display: flex;
     flex-direction: column;
 }
@@ -53,14 +52,7 @@ button:hover{
     flex-direction: column;
     justify-content: center;
 }
-.inclusion-container{
-    height: 100vh;
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-}
+
 .scroll-btn{
     height: 40px;
     width: 120px;
@@ -119,7 +111,7 @@ button:hover{
     }
     video{
         height: 50vh;
-        width: 100vw;
+        width: 100%;
     }
 }
 
@@ -133,14 +125,18 @@ button:hover{
 @media screen and (max-width:768px){
     .data-container{
         height: auto;
+        justify-content: flex-start;
+        align-items: flex-start;
     }
-    
+    .it-container{
+        height: auto;
+    }
 }
   
 @media  screen and (max-width:768px) {
     .weather-img{
-        width:100vw;
-        height: 80vh;
+        width:100%;
+        height: 50vh;
     }
 }
 

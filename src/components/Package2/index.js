@@ -1,16 +1,17 @@
 import {React,useState} from 'react'
 import Navbar from '../Navbar'
 import Footer from '../Footer'
-import {BsArrowLeftSquareFill} from "react-icons/bs";
+import {Link} from 'react-router-dom'
 import './p2.css'
+import {Helmet} from 'react-helmet'
 
 const images = [
-    "https://res.cloudinary.com/dr0vyis3o/image/upload/v1701153600/Spot_Billed_ducks_Kabini_hwm7tw.jpg",
-    "https://res.cloudinary.com/dr0vyis3o/image/upload/v1701153598/Kabini_Leopard_1_p4mezi.jpg",
-    "https://res.cloudinary.com/dr0vyis3o/image/upload/v1701153599/Mom_n_me_Kabini_obupgt.jpg",
-    "https://res.cloudinary.com/dr0vyis3o/image/upload/v1701153598/Kabini_elephant_1_os2djn.jpg",
-    "https://res.cloudinary.com/dr0vyis3o/image/upload/v1701153666/TU_Kabini_guests_ujbmxh.jpg",
-    "https://res.cloudinary.com/dr0vyis3o/image/upload/v1701153681/RC_Team_Kabini_DSC5275_rqvbui.jpg"
+    "https://res.cloudinary.com/dl3vc69uw/image/upload/v1704707622/Spot_Billed_ducks_Kabini_jfkpc3_rh5txt.jpg",
+    "https://res.cloudinary.com/dl3vc69uw/image/upload/v1704707645/Mom_n_me_Kabini_s8iwhf_ks991d.jpg",
+    "https://res.cloudinary.com/dl3vc69uw/image/upload/v1704707652/Kabini_Leopard_ciqcsb_xqgcp9.jpg",
+    "https://res.cloudinary.com/dl3vc69uw/image/upload/v1704707667/Kabini_elephant_wqhzat_b0isso.jpg",
+    "https://res.cloudinary.com/dl3vc69uw/image/upload/v1704707594/TU_Kabini_guests_ujbmxh_y8nuke.jpg",
+    "https://res.cloudinary.com/dl3vc69uw/image/upload/v1704707609/RC_Team_Kabini_DSC5275_rqvbui_yu3l5h.jpg"
 ]
 
 const inclusions=["Two nights stay at JLR Kabini at Viceroy rooms on sharing basis",
@@ -29,17 +30,17 @@ const Package2 = () => {
   const nextSlide = () => {
     setCurrentIndex((prevIndex) => (prevIndex === images.length - 1 ? 0 : prevIndex + 1));
   };
-   
-  const handleBack=()=> {
-    window.history.back();
-  }
 
     return(
         <>
+        <Helmet>
+          <title>Discover Kabini's Enchanting Wilderness: 3-Day South India Forest Expedition</title>
+          <meta name="description" content="Embark on a 2-night journey to the famed forests of Kabini in South India. Immerse yourself in nature's allure on this unforgettable 3-day adventure. Book your escape now!" />
+        </Helmet>
         <Navbar/>
         <div className='container'>
             <div className='row'>
-            <div className='col-12'>
+            <div className='col-12 col-md-12 col-lg-12 col-xl-12'>
             <div className='data-container-package'>
             <h1 className='mb-5 mt-5 blog-head'>Journey to the famed forests of South India - Kabini</h1>
             <h3 className='mb-3 package-head'>Overview:</h3>
@@ -50,14 +51,14 @@ const Package2 = () => {
             Kabini is home for the Royal Bengal tiger, the leopard and wild dogs. It is also home for a multitude
             of birds.</p>
             <p className='list-style'>Our team at Travel Unbounded have curated a wonderful journey to this fame forests during the
-            2024 Sankranthi holidays for your, your friends and families.</p>
+            2024 Sankranthi holidays for your friends and families.</p>
         </div>
         </div>
         </div>
         </div>
     <div className="container mt-5">
     <div className='row carousel-container-package'>
-    <div className='col-12'>
+    <div className='col-12 col-md-12 col-lg-12 col-xl-12'>
       <button className="arrow left-arrow-package" onClick={prevSlide}>
         &lt;
       </button>
@@ -72,7 +73,8 @@ const Package2 = () => {
       </div>
         <div className='container'>
             <div className='row'>
-            <div className='col-12 list-group data-container-package' style={{width:'100%'}}>
+            <div className='col-12 col-md-12 col-lg-12 col-xl-12'>
+            <div className='list-group data-container-package' style={{width:'100%'}}>
             <h3 className='mb-5 mt-5 package-head'>Short Itinerary</h3>
             <details className=' list-group-item list-style'> <summary><b>Day-1</b></summary>
             <hr/>
@@ -80,12 +82,12 @@ const Package2 = () => {
             into the Park with tea/ coffee served at the Gol Ghar. Safari would by a jeep or the boat. You would
             be accompanied by one of the best trained Naturalists, who would share their immense knowledge
             on the flora and fauna of Kabini. Return to the resort around 6.30PM. Have tea/coffee at the Gol
-            Char and return to your rooms. Dinner is served from 8.30PM till 10.00PM. Retire for the day after
+            Ghar and return to your rooms. Dinner is served from 8.30PM till 10.00PM. Retire for the day after
             dinner. ( L D )</p>
             </details>
             <details className='list-group-item list-style'> <summary><b>Day-2</b></summary>
             <hr/>
-            <p className='list-style'>Wake up early, freshen yourself and assemble at the Gol Char for your hot early morning
+            <p className='list-style'>Wake up early, freshen yourself and assemble at the Gol Ghar for your hot early morning
             cup of tea/coffee. Post that you would be allocated different vehicles or boat for the jungle safari.
             Explore the beautiful jungle of Kabini.</p>
             <p className='list-style'>The boat safari is also very interesting here. The boat cruises along the river, and one can sight a
@@ -95,8 +97,8 @@ const Package2 = () => {
             can take a lazy stroll inside the resort or take some rest.</p>
             <p className='list-style'>Post lunch enjoy your afternoon safari inside the jungle. Over the last decade, Kabini a black
             leopard has made its home here and is sighted quite regularly. Lucky guests have got to sight this
-            elusive cat too. Return to the resort, have you favourite hot beverage at the Gol Ghar. You can
-            watch th wildlife movie which would be screened at the Interpretation center, or bask in the warmth
+            exclusive cat too. Return to the resort, have you favourite hot beverage at the Gol Ghar. You can
+            watch the wildlife movie which would be screened at the Interpretation center, or bask in the warmth
 
             of the camp fire. Dinner is served from 8.30PM till 10.00PM. Retire for the day after dinner. ( B L D)</p>
             </details>
@@ -114,22 +116,29 @@ const Package2 = () => {
         </div>
         </div>
         </div>
+        </div>
         <div class="data-container-package mb-5 mt-5">
         <div class="container">
             <div class="row">
-                <div class="col-12 col-md-6 mb-5">
-                    <h3 class="mb-5 mt-5 package-head">Payment Methods</h3>
-                    <ul className='list list-style'>
-                        <li>Cost per person - Ex Kabini - INR <span className='number'>33,307/-</span></li>
-                    </ul>
+                <div class="col-12 col-md-8 col-lg-8 col-xl-8 mb-5">
+                    <h3 class="mb-5 mt-5 package-head">Cost in INR</h3>
+                    <img src='https://res.cloudinary.com/dl3vc69uw/image/upload/v1704709849/kabini-cost_loddwm_n6f4bx.jpg' alt='kabini-cost' className='cost-table text center' />
                 </div>
-                <div class="col-12 col-md-6">
+                <div class="col-12 col-md-4 col-lg-4 col-xl-4">
                     <h3 class="mb-5 mt-5 package-head">Payment Terms</h3>
                     <ul className='list list-style'>
                     <li>100% of the tour cost to be paid at the time of booking</li>
                     </ul>
+                    <h3 class="mb-3 package-head">Note:</h3>
+                    <ul className='list list-style'>
+                    <li>Tariffs are per person per night on twin-sharing basis</li>
+                    <li>Transfers to &amp; from our resorts are not included in the tariff.</li>
+                    <li>Single occupancy charges are applicable.</li>
+                    <li>Tariff for children (accompanying parents) between 5 and 12 years is 50% discount on the tariff.</li>
+                    <li>Tariff May be changed without prior notice.</li>
+                    </ul>
                 </div>
-                <div class="col-12 col-md-6 mb-5">
+                <div class="col-12 col-md-6 col-lg-6 col-xl-6 mb-5">
                     <h3 class=" mt-5 mb-5 package-head">
                        Bank Details
                     </h3>
@@ -140,7 +149,7 @@ const Package2 = () => {
                         <p className='list-style'>Account No : <span className='number'>50200012940675</span></p>
                         <p className='list-style'> IFSC : <span className='number'>HDFC0000075</span></p>
                 </div>
-                <div class="col-12 col-md-6">
+                <div class="col-12 col-md-6 col-lg-6 col-md-6">
                     <h3 class="mb-5 mt-5 package-head">Cancellation Policy</h3>
                     <ul className='list list-style'>
                         <li>50% refund would be given as credit to travel on future trip to Kabini if cancelled on or before
@@ -149,7 +158,7 @@ const Package2 = () => {
                     </ul>
                 </div>
 
-                <div class="col-12 col-md-6">
+                <div class="col-12 col-md-6 col-lg-6 col-md-6">
                     <h3 class="inc-head mb-5 mt-5">Inclusions</h3>
                     <ul className='list-group list-style'>
                       {inclusions.map((item, index) => (
@@ -158,7 +167,7 @@ const Package2 = () => {
                     </ul>
                 </div>
 
-                <div class="col-12 col-md-6">
+                <div class="col-12 col-md-6 col-lg-6 col-md-6">
                     <h3 class="exc-head mb-5 mt-5">Exclusions</h3>
                     <ul className='list-group list-style'>
                     {exclusions.map((item, index) => (
@@ -166,15 +175,8 @@ const Package2 = () => {
                     ))}
                     </ul>
                 </div>
-                
-                <div class="col-12 col-md-12 text-center">
-                    <h3 class="mb-5 mt-5 package-head">Contact</h3>
-                    <p className='list-style'>ck@travelunbounded.com -  <span className='number'>+91 9845090014</span> - Chandru</p>
-                    <p className='list-style'>sk@travelunbounded.com -  <span className='number'>+91 9739255255</span> - Suresh</p>
-                    <p className='list-style'>sg@travelunbounded.com -  <span className='number'>+91 9884023028</span> - Supratik Gosh</p>
-                </div>
                 <div className='text-center mt-5'>
-                <BsArrowLeftSquareFill size={30} onClick={handleBack}/>
+                <Link to='/form' ><button type='button' className='book-btn'>Book Now</button></Link>
                 </div>
             </div>
         </div>

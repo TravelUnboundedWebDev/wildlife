@@ -39,6 +39,8 @@
     background-color: rgb(32,124,178);
     color: white;
   }
+  
+  
 .heading{
   margin-left: 65px;
 }
@@ -61,7 +63,7 @@
 .title-rate{
   font-family: 'Italic';
   font-size: 20px;
-  color: rgb(223,135,3);
+  color: rgb(194, 89, 19);
 }
 @media  screen and (max-width:768px) {
   .package-container{

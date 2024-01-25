@@ -1,6 +1,7 @@
 .weather-img{
     height: 80vh;
-    width: 80vw;
+    width: 80%;
+    object-fit: fill;
 }
 
 button:hover{
@@ -119,28 +120,25 @@ button:hover{
     }
     video{
         height: 50vh;
-        width: 100vw;
+        width: 100%;
     }
 }
-
 @media screen and(min-width:769px){
     .video-banner{
     height: 100vh;
     width: 100%;
-}
-    
+    } 
 }
 @media screen and (max-width:768px){
     .data-container{
         height: auto;
+        justify-content: flex-start;
     }
-    
 }
-  
 @media  screen and (max-width:768px) {
     .weather-img{
-        width:100vw;
-        height: 80vh;
+        width:100%;
+        height: 50vh;
     }
 }
 
