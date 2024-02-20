@@ -9,13 +9,14 @@ import Footer from '../Footer'
 import Helmet from 'react-helmet'
 
 const images = [
-  'https://res.cloudinary.com/dl3vc69uw/image/upload/v1704707594/TU_Kabini_guests_ujbmxh_y8nuke.jpg',
-  'https://res.cloudinary.com/dl3vc69uw/image/upload/v1704707609/RC_Team_Kabini_DSC5275_rqvbui_yu3l5h.jpg',
-  'https://res.cloudinary.com/dl3vc69uw/image/upload/v1704707622/Spot_Billed_ducks_Kabini_jfkpc3_rh5txt.jpg',
-  'https://res.cloudinary.com/dl3vc69uw/image/upload/v1704707645/Mom_n_me_Kabini_s8iwhf_ks991d.jpg',
-  'https://res.cloudinary.com/dl3vc69uw/image/upload/v1704707652/Kabini_Leopard_ciqcsb_xqgcp9.jpg',
-  'https://res.cloudinary.com/dl3vc69uw/image/upload/v1704707667/Kabini_elephant_wqhzat_b0isso.jpg',
+  "/packages/img-2-5.jpg",
+  "/packages/img-2-6.jpg",
+  "/packages/img-2-1.jpg",
+  "/packages/img-2-2.jpg",
+  "/packages/img-2-3.jpg",
+  "/packages/img-2-4.jpg"
 ]
+
 
 const inclusions = ["Full board stay at a Jungle Lodges & resorts","Game drives","National park permit & Entry fees","English speaking guides"];
 const exclusions = ["Airfare or train fare from home destination to nearest airport or railway station","Expenses of personal nature","Any still or video camera fees","GST","Any meals, services not mentioned in the Inclusions section"];
@@ -56,7 +57,7 @@ const DestinationKabini = () => {
     </div>
     <div className='video-banner d-none  d-md-block' ref={sec1}>
     <video autoPlay loop controls muted
-      src='https://res.cloudinary.com/dl3vc69uw/video/upload/v1704707496/Kabini_corrected_iia9kr_km5w7e.mp4'
+      src='/destinations/kabini.mp4'
       type='video/mp4'>
     </video>
     <div className='button-banner'>
@@ -65,7 +66,7 @@ const DestinationKabini = () => {
     </div>
 
     <div className='video-banner d-sm-block d-md-none' ref={sec1}>
-    <img src='https://res.cloudinary.com/dl3vc69uw/image/upload/v1704707510/Mom_n_me_Kabini_s8iwhf_jiehet.jpg' alt='Kenya' className='destination-img' />
+    <img src='/destinations/kabini-mob.jpg' alt='Kenya' className='destination-img' />
     </div>
     
     <div className="container" ref={sec2}>
@@ -96,7 +97,7 @@ const DestinationKabini = () => {
         <div className="col-12 col-md-12 col-lg-12 col-xl-12">
           <div className='it-container data-container'>
             <h2 className='bold package-head'>Getting there</h2>
-            <img src='https://res.cloudinary.com/dl3vc69uw/image/upload/v1704707533/11_amte3s_axkjed.png' alt='' className='weather-img'/>      
+            <img src='/destinations/kabini-get.png' alt='' className='weather-img'/>      
           <div className='scroll-container'>
           <BsArrowDownSquareFill size={30} onClick={()=>scrollHandler(sec4)}/> 
             </div>
@@ -108,7 +109,7 @@ const DestinationKabini = () => {
       <div className="row">
         <div className="col-12 col-md-12 col-lg-12 col-xl-12">
           <div className='it-container data-container'>
-            <img src='https://res.cloudinary.com/dl3vc69uw/image/upload/v1704707549/12_zmkfvb_uoib82.png' alt='' className='weather-img'/>      
+            <img src='/destinations/kabini-map.png' alt='' className='weather-img'/>      
           <div className='scroll-container mt-3'>
           <BsArrowDownSquareFill size={30} onClick={()=>scrollHandler(sec5)}/> 
             </div>
@@ -168,7 +169,7 @@ const DestinationKabini = () => {
         <div className="col-12 col-md-12 col-lg-12 col-xl-12">
           <div className='it-container data-container'>
             <h2 className='bold package-head'>Weather at Kabini</h2>
-            <img src='https://res.cloudinary.com/dl3vc69uw/image/upload/v1704707566/Kabini_zxz70w_r4lkyo.jpg' alt='' className='weather-img'/>
+            <img src='/destinations/kabini-weather.jpg' alt='' className='weather-img'/>
             <div className='scroll-container'>
             <BsArrowDownSquareFill size={30} onClick={()=>scrollHandler(sec8)}/> 
             </div>        

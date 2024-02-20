@@ -9,10 +9,10 @@ import Gallery from '../Gallery';
 import SearchOverlay from '../SearchOverlay';
 
 const images= [
-    'https://res.cloudinary.com/dl3vc69uw/image/upload/v1704695573/google-4_afchox_sdsayu.jpg',
-    'https://res.cloudinary.com/dl3vc69uw/image/upload/v1704695601/google-3_llrz75_z3kyzp.jpg',
-    'https://res.cloudinary.com/dl3vc69uw/image/upload/v1704695610/google-5_iivjjf_t6ngwc.jpg',
-    'https://res.cloudinary.com/dl3vc69uw/image/upload/v1704695626/google-2_vdbgoh_hwz0pb.jpg'
+    '/home/review-1.jpg',
+    '/home/review-2.jpg',
+    '/home/review-3.jpg',
+    '/home/review-4.jpg'
 ]
 
 function Navbar() {
@@ -39,7 +39,7 @@ function Navbar() {
     <div className='navbar mr-3 ml-3'>
        <Link to='/'> 
        <div className = "logo" >
-        <img src = "https://res.cloudinary.com/dl3vc69uw/image/upload/v1704695495/Transparent_-_Travel_Unbounded-06_1_m692ki_jz6wgh.png" alt = "Logo" />
+        <img src = "/home/logo.png" alt = "Logo" />
         </div>  
         </Link>
         <div className='nav-right'>
@@ -94,7 +94,7 @@ function Navbar() {
                 <Gallery images={images}/>
                 <h5 className='mt-5 text-center nav-buttons' style={{color:'white', fontWeight:'bold'}}>Write a review to Scan</h5>
                 <div className='text-center'>
-                <img src='https://res.cloudinary.com/dl3vc69uw/image/upload/v1704695542/Travel_Unbounded-reviews_n74epw_u5cwfn.png' alt='scanner-reviews' className='qr-code'/> 
+                <img src='/home/reviews.png' alt='scanner-reviews' className='qr-code'/> 
                 </div>
                 </div>
             </div>

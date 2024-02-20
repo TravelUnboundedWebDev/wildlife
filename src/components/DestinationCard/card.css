@@ -14,6 +14,10 @@
     text-align: start;
     border-radius: 12px;
   }
+  .sold-out{
+   position: relative;
+
+  }
   .package-card:hover{
     border:1px solid white;
   }
@@ -39,7 +43,34 @@
     background-color: rgb(32,124,178);
     color: white;
   }
-  
+  .sold-out {
+    position: relative;
+    left: 0;
+    bottom: 30%;
+    background-color: red;
+    color: white;
+    transform: rotate(-48deg);
+    transform-origin: 0 0;
+    font-size: 12px;
+    width: 155px;
+    text-align: center;
+    border-radius: 8px;
+    font-family: 'Georgia';
+  }
+  .fast-filling{
+    position: relative;
+    left: 0;
+    bottom: 30%;
+    background-color: green;
+    color: white;
+    transform: rotate(-48deg);
+    transform-origin: 0 0;
+    font-size: 12px;
+    width: 155px;
+    text-align: center;
+    border-radius: 8px;
+    font-family: 'Georgia';
+  }
   
 .heading{
   margin-left: 65px;

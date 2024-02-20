@@ -10,15 +10,16 @@ import DestinationKabini from './components/DestinationKabini'
 import DestinationBandipur from './components/DestinationBandipur'
 import HotSellingPackages from './components/HotSellingPackages'
 import BlogList from './components/BlogList'
-import Package1 from './components/Package1'
-import Package2 from './components/Package2'
-import Package3 from './components/Package3'
-import Package4 from './components/Package4'
-import Package5 from './components/Package5'
-import Package6 from './components/Package6'
-import Package7 from './components/Package7'
-import Package8 from './components/Package8'
-import Package9 from './components/Package9'
+import PackageBandipur from './components/PackageBandipur'
+import PackageKabini from './components/PackageKabini'
+import PackagePench from './components/PackagePench'
+import PackageCorbett from './components/PackageCorbett'
+import PackageRanthambore from './components/PackageRanthambore'
+import PackageBandhavgarh from './components/PackageBandhavgarh'
+import PackageKenya from './components/PackageKenya'
+import PackageCorbettLuxery from './components/PackageCorbettLuxery'
+import PackageMara from './components/PackageMara'
+import PackageMagicalMara from './components/PackageMagicalMara'
 import About from './components/About'
 import BlogDetails from './components/BlogDetails'
 import ScrollToTop from './components/ScrollToTop'
@@ -29,6 +30,13 @@ import Footer from './components/Footer'
 import NotFound from './components/NotFound'
 import SearchNotFound from './components/SearchNotFound'
 import SearchOverlay from './components/SearchOverlay';
+import LandingMara from './components/LandingMara';
+import PriceMara from './components/PriceMara';
+import Talk from './components/Talk';
+import OverviewMara from './components/OverviewMara';
+import ItiMara from './components/ItiMara';
+import IncExcMara from './components/IncExcMara';
+
 
 function App(){
   return(
@@ -46,20 +54,27 @@ function App(){
         <Route exact path='/packages' Component={HotSellingPackages} />
         <Route exact path='/about' Component={About}/>
         <Route exact path='/blogs' Component={BlogList}/>
-        <Route exact path='/packages/bandipur' Component={Package1} />
-        <Route exact path='/packages/kabini' Component={Package2} />
-        <Route exact path='/packages/pench' Component={Package3} />
-        <Route exact path='/packages/corbett' Component={Package4} />
-        <Route exact path='/packages/ranthambore' Component={Package5} />
-        <Route exact path='/packages/bandhavgarh' Component={Package6} />
-        <Route exact path='/packages/kenya' Component={Package7} />
-        <Route exact path='/packages/corbett/2' Component={Package8} />
-        <Route exact path='/packages/mara' Component={Package9} />
+        <Route exact path='/packages/bandipur' Component={PackageBandipur} />
+        <Route exact path='/packages/kabini' Component={PackageKabini} />
+        <Route exact path='/packages/pench' Component={PackagePench} />
+        <Route exact path='/packages/corbett' Component={PackageCorbett} />
+        <Route exact path='/packages/ranthambore' Component={PackageRanthambore} />
+        <Route exact path='/packages/bandhavgarh' Component={PackageBandhavgarh} />
+        <Route exact path='/packages/kenya' Component={PackageKenya} />
+        <Route exact path='/packages/corbett/luxery' Component={PackageCorbettLuxery} />
+        <Route exact path='/packages/mara' Component={PackageMara} />
+        <Route exact path='/packages/magicalmara' Component={PackageMagicalMara} />
         <Route exact path='/blog/:id' Component={BlogDetails} />
         <Route exact path='/form' Component={Form}/>
         <Route exact path='privacy' Component={Privacy}/>
         <Route exact path='/terms' Component={Terms}/>
         <Route exact path='/contact' Component={Footer} />
+        <Route exact path='/landing-mara' Component={LandingMara} />
+        <Route exact path='/price-mara' Component={PriceMara} />
+        <Route exact path='/talk-to-us' Component={Talk} />
+        <Route exact path='/overview-mara' Component={OverviewMara} />
+        <Route exact path='/itinerary-mara' Component={ItiMara} />
+        <Route exact path='/inclusions-mara' Component={IncExcMara} />
         <Route exact path='/search-overlay' Component={SearchOverlay} />
         <Route exact path='/search-not-found' Component={SearchNotFound} />
         <Route path='*' Component={NotFound} />

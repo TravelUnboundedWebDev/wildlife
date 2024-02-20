@@ -10,12 +10,13 @@ import Helmet from 'react-helmet'
 
 
 const images = [
-  'https://res.cloudinary.com/dl3vc69uw/image/upload/v1704705736/group_photo_bmmbzh_fwg1c9.jpg',
-  'https://res.cloudinary.com/dl3vc69uw/image/upload/v1704705752/Corbett_Gallery_1_nnsrcv_kt6fii.jpg',
-  'https://res.cloudinary.com/dl3vc69uw/image/upload/v1704705793/Corbett_Gallery_2_srae9c_k5hjqg.jpg',
-  'https://res.cloudinary.com/dl3vc69uw/image/upload/v1704705818/Corbett_Gallery_5_ctyuzg_v7ea7i.jpg',
-  'https://res.cloudinary.com/dl3vc69uw/image/upload/v1704705825/Corbett_Gallery_4_xyjlfz_djxfac.jpg',
-  'https://res.cloudinary.com/dl3vc69uw/image/upload/v1704705843/Corbett_Gallery_3_gwiwfl_ppnkom.jpg',
+  "/packages/img-4-6.jpg",
+  "/packages/img-4-5.jpg",
+  "/packages/img-4-4.jpg",
+  "/packages/img-8-10.jpg",
+  "/packages/img-4-1.jpg",
+  "/packages/img-4-2.jpg",
+  "/packages/img-4-3.jpg",
 ]
 
 const inclusions = ["Full board stay at either the forest rest house or at a resort at Ramnagar","Game drives","National park permit & Entry fees"];
@@ -28,8 +29,6 @@ const itinerary_details =
         fn:'Foreign Nationals - $125'
         }
   
-
-
 
 const DestinationBandipur = () => {
     const sec0 = useRef();
@@ -60,7 +59,7 @@ const DestinationBandipur = () => {
     </div>
     <div className='video-banner d-none d-md-block' ref={sec1}>
     <video autoPlay loop controls muted
-      src='https://res.cloudinary.com/dl3vc69uw/video/upload/v1704705622/CRT_Final_2_a10w02_czbxgu_xs4yod.mp4'
+      src='/destinations/corbett.mp4'
       type='video/mp4'>
     </video>
     <div className='button-banner'>
@@ -69,7 +68,7 @@ const DestinationBandipur = () => {
     </div>
 
     <div className='video-banner d-sm-block d-md-none' ref={sec1}>
-    <img src='https://res.cloudinary.com/dl3vc69uw/image/upload/v1704705642/Corbett_banner_image_becmes_lozswl.jpg' alt='Kenya' className='destination-img' />
+    <img src='/destinations/corbett-mob.jpg' alt='Kenya' className='destination-img' />
     </div>
     
     <div className="container" ref={sec2}>
@@ -105,7 +104,7 @@ const DestinationBandipur = () => {
         <div className="col-12 col-md-12 col-lg-12 col-xl-12">
           <div className='it-container data-container'>
             <h2 className='bold mb-3 package-head'>Getting there</h2>
-            <img src='https://res.cloudinary.com/dl3vc69uw/image/upload/v1704705660/7_apfn5m_daydox.png' alt='' className='weather-img'/>      
+            <img src='/destinations/corbett-get.png' alt='' className='weather-img'/>      
           <div className='scroll-container'>
           <BsArrowDownSquareFill size={30} onClick={()=>scrollHandler(sec4)}/> 
             </div>
@@ -117,7 +116,7 @@ const DestinationBandipur = () => {
       <div className="row">
         <div className="col-12 col-md-12 col-lg-12 col-xl-12">
           <div className='it-container data-container'>
-            <img src='https://res.cloudinary.com/dl3vc69uw/image/upload/v1704705676/8_wpjkp7_pn2zvi.png' alt='' className='weather-img'/>      
+            <img src='/destinations/corbett-map.png' alt='' className='weather-img'/>      
           <div className='scroll-container mt-3'>
         <BsArrowDownSquareFill size={30} onClick={()=>scrollHandler(sec5)}/>       
             </div>
@@ -180,7 +179,7 @@ const DestinationBandipur = () => {
         <div className="col-12 col-md-12 col-lg-12 col-xl-12">
           <div className='it-container data-container'>
             <h2 className='bold package-head'>Weather at Corbett</h2>
-            <img src='https://res.cloudinary.com/dl3vc69uw/image/upload/v1704705700/Corbett_fwjlc2_izlrr6.jpg' alt='' className='weather-img'/>
+            <img src='/destinations/corbett-weather.jpg' alt='' className='weather-img'/>
             <div className='scroll-container'>
             <BsArrowDownSquareFill size={30} onClick={()=>scrollHandler(sec8)}/> 
             </div>        

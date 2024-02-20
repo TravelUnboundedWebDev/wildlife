@@ -10,13 +10,12 @@ import Helmet from 'react-helmet'
 
 
 const images = [
-    'https://res.cloudinary.com/dl3vc69uw/image/upload/v1704704834/TU_Kanha_1_of_1_xavkxj_bdhmfs.jpg',
-    'https://res.cloudinary.com/dl3vc69uw/image/upload/v1704704857/BNDVG_Lupin_u28frq_ztorqx.jpg',
-    'https://res.cloudinary.com/dl3vc69uw/image/upload/v1704704875/Bandhavgarh_Gallery_1_gpytdv_fxv3oa.jpg',
-    'https://res.cloudinary.com/dl3vc69uw/image/upload/v1704704919/Bandhavgarh_Gallery_2_fuz0di_x3lpxd.jpg',
-    'https://res.cloudinary.com/dl3vc69uw/image/upload/v1704704937/Bandhavgarh_Gallery_3_dnpo1d_xnmogy.jpg',
-    'https://res.cloudinary.com/dl3vc69uw/image/upload/v1704704960/Bandhavgarh_Gallery_4_fgvmgs_pbw6zs.jpg',
-    'https://res.cloudinary.com/dl3vc69uw/image/upload/v1704704967/Bandhavgarh_Gallery_5_i4xnjt_bqis4b.jpg',
+  "/packages/img-6-5.jpg",
+  "/packages/img-6-6.jpg",
+  "/packages/img-6-1.jpg",
+  "/packages/img-6-2.jpg",
+  "/packages/img-6-3.jpg",
+  "/packages/img-6-4.jpg"
 ]
 
 
@@ -62,7 +61,7 @@ const DestinationBandhavgarh = () => {
     </div>
     <div className='video-banner d-none d-md-block' ref={sec1}>
     <video autoPlay loop controls muted
-      src='https://res.cloudinary.com/dl3vc69uw/video/upload/v1704704611/Bandhavgarh_oaxarn_wibx44.mp4'
+      src='/destinations/bandhavgarh.mp4'
       type='video/mp4'>
     </video>
     <div className='button-banner'>
@@ -71,7 +70,7 @@ const DestinationBandhavgarh = () => {
     </div>
 
     <div className='video-banner d-sm-block d-md-none' ref={sec1}>
-    <img src='https://res.cloudinary.com/dl3vc69uw/image/upload/v1704704651/Bandhavgarh_banner_image_weibkp_kjql9p.jpg' alt='bandhavgarh' className='destination-img' />
+    <img src='/destinations/bandhavgarh-mob.jpg' alt='bandhavgarh' className='destination-img' />
     </div>
     
     <div className="container" ref={sec2}>
@@ -104,7 +103,7 @@ const DestinationBandhavgarh = () => {
         <div className="col-12 col-md-12 col-lg-12 col-xl-12">
           <div className='it-container data-container'>
             <h2 className='bold package-head'>Getting there</h2>
-            <img src='https://res.cloudinary.com/dl3vc69uw/image/upload/v1704704688/BTR_owmwkz_mzri07.png' alt='' className='weather-img'/>      
+            <img src='/destinations/bandhavgarh-get.png' alt='' className='weather-img'/>      
           <div className='scroll-container'>
           <BsArrowDownSquareFill size={30} onClick={()=>scrollHandler(sec4)}/>
             </div>
@@ -116,7 +115,7 @@ const DestinationBandhavgarh = () => {
       <div className="row">
         <div className="col-12 col-md-12 col-lg-12 col-xl-12">
           <div className='it-container data-container'>
-            <img src='https://res.cloudinary.com/dl3vc69uw/image/upload/v1704704715/6_awcpfh_kqxo7l.png' alt='' className='weather-img'/>      
+            <img src='/destinations/bandhavgarh-map.png' alt='' className='weather-img'/>      
           <div className='scroll-container mt-3'>
           <BsArrowDownSquareFill size={30} onClick={()=>scrollHandler(sec5)}/> 
             </div>
@@ -176,7 +175,7 @@ const DestinationBandhavgarh = () => {
         <div className="col-12 col-md-12 col-lg-12 col-xl-12">
           <div className='it-container data-container'>
             <h2 className='bold package-head'>Weather at Bandhavgarh</h2>
-            <img src='https://res.cloudinary.com/dl3vc69uw/image/upload/v1704704746/Bandhavgarh_qqnoqz_jiueoh.jpg' alt='' className='weather-img'/>
+            <img src='/destinations/bandhavgarh-weather.jpg' alt='' className='weather-img'/>
             <div className='scroll-container'>
             <BsArrowDownSquareFill size={30} onClick={()=>scrollHandler(sec8)}/> 
             </div>        

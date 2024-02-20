@@ -9,11 +9,10 @@ import Footer from '../Footer'
 import Helmet from 'react-helmet'
 
 const images = [
-  'https://res.cloudinary.com/dl3vc69uw/image/upload/v1704698051/Kenya_Gallery_1_v91xy4_zs7qva.jpg',
-  'https://res.cloudinary.com/dl3vc69uw/image/upload/v1704698068/Kenya_Gallery_2_ovipcd_alo3ww.jpg',
-  'https://res.cloudinary.com/dl3vc69uw/image/upload/v1704698084/Kenya_Gallery_3_nswbdn_ri664p.jpg',
-  'https://res.cloudinary.com/dl3vc69uw/image/upload/v1704698104/Kenya_Gallery_5_l1ghqc_jbs7du.jpg',
-  'https://res.cloudinary.com/dl3vc69uw/image/upload/v1704698122/Kenya_Gallery_4_u7kxud_csopr3.jpg',
+  '/destinations/kenya-1-1.jpg',
+  '/destinations/kenya-1-2.jpg',
+  '/destinations/kenya-1-3.jpg',
+  '/destinations/kenya-1-4.jpg'
 ]
 
 const itinerary_details =
@@ -56,7 +55,7 @@ const DestinationKenya = () => {
     </div>
     <div className='video-banner d-none d-md-block' ref={sec1}>
     <video autoPlay loop controls muted
-      src='https://res.cloudinary.com/dl3vc69uw/video/upload/v1704697867/KE_Final_2_qrsgmo_gnqfls_urcm4i.mp4'
+      src='/destinations/kenya.mp4'
       type='video/mp4'>
     </video>
     <div className='button-banner'>
@@ -65,7 +64,7 @@ const DestinationKenya = () => {
     </div>
 
     <div className='video-banner d-sm-block d-md-none' ref={sec1}>
-    <img src='https://res.cloudinary.com/dl3vc69uw/image/upload/v1704697927/Kenya_banner_image_eg6tfq_fywwsg.jpg' alt='Kenya' className='destination-img' />
+    <img src='/destinations/kenya-mob.jpg' alt='Kenya' className='destination-img' />
     </div>
     
     <div className="container" ref={sec2}>
@@ -100,7 +99,7 @@ const DestinationKenya = () => {
         <div className="col-12 col-md-12 col-lg-12 col-xl-12">
           <div className='it-container data-container'>
             <h2 className='bold package-head'>Getting there</h2>
-            <img src='https://res.cloudinary.com/dl3vc69uw/image/upload/v1704697961/1_qcvj5e_icwhvs.png' alt='' className='weather-img'/>      
+            <img src='/destinations/kenya-get.png' alt='' className='weather-img'/>      
           <div className='scroll-container'>
           <BsArrowDownSquareFill size={30} onClick={()=>scrollHandler(sec4)}/> 
             </div>
@@ -112,7 +111,7 @@ const DestinationKenya = () => {
       <div className="row">
         <div className="col-12 col-md-12 col-lg-12 col-xl-12">
           <div className='it-container data-container'>
-            <img src='https://res.cloudinary.com/dl3vc69uw/image/upload/v1704697982/2_hzqhya_arf4lh.png' alt='' className='weather-img'/>      
+            <img src='/destinations/kenya-map.png' alt='' className='weather-img'/>      
           <div className='scroll-container mt-3'>
           <BsArrowDownSquareFill size={30} onClick={()=>scrollHandler(sec5)}/> 
             </div>
@@ -221,7 +220,7 @@ const DestinationKenya = () => {
         <div className="col-12 col-md-12 col-lg-12 col-xl-12">
           <div className='it-container data-container'>
             <h2 className='bold package-head'>Weather at Kenya</h2>
-            <img src='https://res.cloudinary.com/dl3vc69uw/image/upload/v1704698016/Kenya_zlwgdt_u7prp9.jpg' alt='' className='weather-img'/>
+            <img src='/destinations/kenya-weather.jpg' alt='' className='weather-img'/>
             <div className='scroll-container'>
             <BsArrowDownSquareFill size={30} onClick={()=>scrollHandler(sec10)}/>
             </div>        

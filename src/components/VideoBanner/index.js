@@ -5,7 +5,7 @@ function VideoBanner() {
     return ( 
         <div className = "video-banner" >
             <video autoPlay loop muted controls= {true}
-                src = "https://res.cloudinary.com/dl3vc69uw/video/upload/v1704694207/Banner_vid_cpizkb_wlnr5z.mp4"
+                src = "/home/banner.mp4"
                 type = "video/mp4">
             </video>
             <div className="text-container-video">

@@ -15,7 +15,7 @@ const HotSellingPackages = () => {
     </Helmet>
     <Navbar/>
     
-    <img src='https://res.cloudinary.com/dl3vc69uw/image/upload/v1704696544/Tiger_cub_Bandhavgarh_wo11wx_dpck4o.jpg' alt='' className='destination-img-package' />
+    <img src='/packages/img-6-1.jpg' alt='' className='destination-img-package' />
        
     <h1 className='text-center blog-head mt-5'>Hot Selling Packages</h1>
     <div className="destinations-container">

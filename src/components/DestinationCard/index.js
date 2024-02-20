@@ -9,6 +9,7 @@ const DestinationCard = () => {
   const [cards, setCards] = useState([]);
   const [loading, setLoading] = useState(true);
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
+  //const [soldOut, setSoldOut] = useState(false)
   
   useEffect(() => {
     const handleResize = () => {
@@ -37,14 +38,18 @@ const DestinationCard = () => {
   }, []);
 
   return (
+    <>
     <div className="destination-card">
       {loading ? (
         <Loader type="balls" color="blue" height={40} width={40} />
       ) : (
       <div className="package-container">
         {cards.map((card) => (
-          <div key={card.id} className="package-card mt-4">
+          <div key={card.id} className="package-card mb-3">
             <img src={card.image} alt='' className='card-img mb-3'/>
+            {card.soldOut && <div className="sold-out">Sold Out</div>}
+            {card.fast && <div className="fast-filling">Filling up fast</div>}
+            <div>
             <h4 className='title mb-3'>{card.name}</h4>
             <h5 className='title-rate bold mb-3'>{card.days}</h5>
             <h5 className='title-rate bold mb-3'>{card.price}</h5>
@@ -53,11 +58,13 @@ const DestinationCard = () => {
             <button className="view-button-card">{isMobile ? 'View' : 'View Itinerary'}</button></Link>
             <Link to='/form' className='blogs-link'><button className="view-button-card">{isMobile ? 'Book' : 'Book Now'}</button></Link>
             </div>
+            </div>
           </div>
         ))}
       </div>
       )}
     </div>
+    </>
   )
 };
 export default DestinationCard;

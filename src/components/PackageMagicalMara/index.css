@@ -1,0 +1,46 @@
+.package-image-a{
+    height: 95vh;
+    width: 100%;
+    object-fit: cover;
+    background-position: center;   
+}
+.package-image-long{
+    height: 100vh;
+    width: 100%;
+    object-fit: cover;
+    background-position: center;   
+}
+.package-image-it{
+    height: 70vh;
+    width: 100%;
+    object-fit: cover;
+    background-position: center;   
+}
+.package-image-c{
+    height: 80vh;
+    width: 100%;
+    object-fit: cover;
+    background-position: center;   
+}
+.package-image-d{
+    height: 90vh;
+    width: 100%;
+    object-fit: cover;
+    background-position: center;   
+}
+
+@media screen and (max-width:756px) {
+    .package-image-a{
+        height: 50vh;
+        width: 100%;
+    }
+    .package-image-last-2{
+        height: 50vh;
+        width: 100%;
+    }
+    .package-image-d{
+        height: 50vh;
+        width: 100%;
+    }
+    
+}

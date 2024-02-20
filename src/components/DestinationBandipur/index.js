@@ -10,12 +10,15 @@ import Helmet from 'react-helmet'
 
 
 const images = [
-  'https://res.cloudinary.com/dl3vc69uw/image/upload/v1704706965/TU_Bandi_lqlz99_tmne08.jpg',
-  'https://res.cloudinary.com/dl3vc69uw/image/upload/v1704706986/TU_Kids_1_of_1_tmplnb_bsfu5b.jpg',
-  'https://res.cloudinary.com/dl3vc69uw/image/upload/v1704706999/Deers_Bandipur_l9v1ci_ljszdd.jpg',
-  'https://res.cloudinary.com/dl3vc69uw/image/upload/v1704707017/1_Bandipur_kmdq6e_pje6rx.jpg',
-  'https://res.cloudinary.com/dl3vc69uw/image/upload/v1704707024/Bandipur_Tiger_reflection_amzlc6_gwdf5b.jpg',
+  "/packages/img-1-6.jpg",
+  "/packages/img-1-7.jpg",
+  "/packages/img-1-1.jpg",
+  "/packages/img-1-2.jpg",
+  "/packages/img-1-3.jpg",
+  "/packages/img-1-4.jpg",
+  "/packages/img-1-5.jpg"
 ]
+
 
 const inclusions = ["Full board stay at a Jungle Lodges & resorts","Game drives","National park permit & Entry fees","English speaking guides"];
 const exclusions = ["Airfare or train fare from home destination to nearest airport or railway station","Expenses of personal nature","Any still or video camera fees","GST","Any meals, services not mentioned in the Inclusions section"];
@@ -60,7 +63,7 @@ const DestinationBandipur = () => {
     </div>
     <div className='video-banner d-none d-md-block' ref={sec1}>
     <video autoPlay loop controls muted
-      src='https://res.cloudinary.com/dl3vc69uw/video/upload/v1704706824/Bandipur_vnojtq_mhauco.mp4'
+      src='/destinations/bandipur.mp4'
       type='video/mp4'>
     </video>
     <div className='button-banner'>
@@ -69,7 +72,7 @@ const DestinationBandipur = () => {
     </div>
 
     <div className='video-banner d-sm-block d-md-none' ref={sec1}>
-    <img src='https://res.cloudinary.com/dl3vc69uw/image/upload/v1704706848/Tiger_Bandipur_lpnloe_in4ths.jpg' alt='Kenya' className='destination-img' />
+    <img src='/destinations/bandipur-mob.jpg' alt='Kenya' className='destination-img' />
     </div>
   
     <div className="container" ref={sec2}>
@@ -100,7 +103,7 @@ const DestinationBandipur = () => {
         <div className="col-12 col-md-12 col-lg-12 col-xl-12">
           <div className='it-container data-container'>
             <h2 className='bold package-head'>Getting there</h2>
-            <img src='https://res.cloudinary.com/dl3vc69uw/image/upload/v1704706880/13_mmklti_dvfuwh.png' alt='' className='weather-img'/>      
+            <img src='/destinations/bandipur-get.png' alt='' className='weather-img'/>      
           <div className='scroll-container'>
           <BsArrowDownSquareFill size={30} onClick={()=>scrollHandler(sec4)}/> 
             </div>
@@ -112,7 +115,7 @@ const DestinationBandipur = () => {
       <div className="row">
         <div className="col-12 col-md-12 col-lg-12 col-xl-12">
           <div className='it-container data-container'>
-            <img src='https://res.cloudinary.com/dl3vc69uw/image/upload/v1704706905/14_rmvmbm_nbuqse.png' alt='' className='weather-img'/>      
+            <img src='/destinations/bandipur-map.png' alt='' className='weather-img'/>      
           <div className='scroll-container mt-3'>
           <BsArrowDownSquareFill size={30} onClick={()=>scrollHandler(sec5)}/>  
             </div>
@@ -176,7 +179,7 @@ const DestinationBandipur = () => {
         <div className="col-12 col-md-12 col-lg-12 col-xl-12">
           <div className='it-container data-container'>
             <h2 className='bold package-head'>Weather at Bandipur</h2>
-            <img src='https://res.cloudinary.com/dl3vc69uw/image/upload/v1704706932/Bandipur_dhcfzu_y7ygnv.jpg' alt='' className='weather-img'/>
+            <img src='/destinations/bandipur-weather.jpg' alt='' className='weather-img'/>
             <div className='scroll-container'>
             <BsArrowDownSquareFill size={30} onClick={()=>scrollHandler(sec8)}/> 
             </div>        

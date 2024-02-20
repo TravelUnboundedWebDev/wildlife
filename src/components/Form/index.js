@@ -15,12 +15,12 @@ import {Helmet} from 'react-helmet';
 
 
 const firebaseConfig = {
-  apiKey: "AIzaSyB4BPMHKw0OXM2PhQX9NcT25lDBWpRpIPQ",
-  authDomain: "phone-auth-d0a8d.firebaseapp.com",
-  projectId: "phone-auth-d0a8d",
-  storageBucket: "phone-auth-d0a8d.appspot.com",
-  messagingSenderId: "309252587015",
-  appId: "1:309252587015:web:3f9dc2505965e66269b4a2"
+  apiKey: process.env.REACT_APP_API_KEY,
+  authDomain: process.env.REACT_APP_AUTH_DOMAIN,
+  projectId: process.env.REACT_APP_PROJECT_ID,
+  storageBucket: process.env.REACT_APP_STORAGE_BUCKET,
+  messagingSenderId: process.env.REACT_APP_MESSAGING_SENDER_ID,
+  appId: process.env.REACT_APP_APP_ID
 };
 
 if (!firebase.apps.length) {
@@ -115,12 +115,25 @@ const BookingForm = () => {
     addNearestPlace: places,
   }));
 };
-
   const handleSubmit = async(e) => {
     e.preventDefault();
 
     try {
       const { name, email, country, destination,addNearestPlace, date, adults, childrens, duration, callbackTime, queries } = formData;
+      const db = firebase.firestore();
+      db.collection('formData').add({
+        name:name,
+        email:email,
+        country:country,
+        destination:destination,
+        addNearestPlace:addNearestPlace,
+        date:date,
+        adults:adults,
+        childrens:childrens,
+        duration:duration,
+        callbackTime:callbackTime,
+        queries:queries
+      })
       const response = await fetch('https://formbackend.netlify.app/submit', {
         method: 'POST',
         headers: {
@@ -128,7 +141,6 @@ const BookingForm = () => {
         },
         body: JSON.stringify({ name, email, country, destination,addNearestPlace, date, adults, childrens, duration, callbackTime, queries, phoneNumber }),
       });
-
       const data = await response.json();
       console.log(data.message);
       toast.success("Booking Successfull")
@@ -167,10 +179,10 @@ const BookingForm = () => {
     <Toaster toastOptions={{ duration: 5000 }} />
     <div className="container-fluid app">
     <div onClick={handleGoBack} style={{ position: 'absolute', top: '10px', right: '10px' }}>
-            <FiX size={40}/>
+      <FiX size={40}/>
     </div>
       <div className='book-img'>
-      <img src='https://res.cloudinary.com/dl3vc69uw/image/upload/v1704695956/Untitled_design_ageva5_je6sjt.png' alt='' className='pug-mark' />
+      <img src='/home/pug.png' alt='' className='pug-mark' />
       </div>
       <h2 className='text-center input-text'>Book Your Tour</h2>
       <p className='text-center input-text mb-4'>Game drives/Safari-zones subject to availability<br/> <span>Recommend to plan a travel post 30 days</span></p>
@@ -284,8 +296,6 @@ const BookingForm = () => {
                 min={minDate.toISOString().split('T')[0]}
                 onChange={handleChange}
                 placeholder="select Date*"
-                //dateFormat='dd/MM/YYYY'
-                //dayClassName={(date) => (isBlockedDate(date) ? 'blocked-date' : '')}
                 required
               />
             </div>

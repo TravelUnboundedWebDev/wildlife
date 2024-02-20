@@ -10,13 +10,11 @@ import Helmet from 'react-helmet'
 
 
 const images = [
-  'https://res.cloudinary.com/dl3vc69uw/image/upload/v1704699788/TU_RTR_1_of_1_kxckm5_zrg0oe.jpg',
-  'https://res.cloudinary.com/dl3vc69uw/image/upload/v1704699795/TU_RTR_r6grya_davnpv.jpg',
-  "https://res.cloudinary.com/dl3vc69uw/image/upload/v1704699820/Ranthambore_Gallery_4_t7umjf_gxwdcs.jpg",
-  'https://res.cloudinary.com/dl3vc69uw/image/upload/v1704699825/Ranthambore_Gallery_1_odxip0_xtvxiq.jpg',
-  'https://res.cloudinary.com/dl3vc69uw/image/upload/v1704699844/Ranthambore_Gallery_3_jmheyh_gpgziq.jpg',
-  'https://res.cloudinary.com/dl3vc69uw/image/upload/v1704699860/Ranthambore_Gallery_2_ckxejx_ef5xr4.jpg',
-  'https://res.cloudinary.com/dl3vc69uw/image/upload/v1704699875/Ranthambore_Gallery_5_pzxvec_hfcu21.jpg',
+  "/packages/img-5-5.jpg",
+  "/packages/img-5-2.jpg",
+  "/packages/img-5-3.jpg",
+  "/packages/img-5-4.jpg",
+  "/packages/img-5-1.jpg",
 ]
 
 const inclusions = ["Full board stay at a boutique resort at Ranthambore on twin sharing basis","Game drives on shared seats basis in a jeep","National park permit & Entry fees",];
@@ -62,7 +60,7 @@ const DestinationRanthambore = () => {
     </div>
     <div className='video-banner d-none d-md-block' ref={sec1}>
     <video autoPlay loop controls muted
-      src='https://res.cloudinary.com/dl3vc69uw/video/upload/v1704699647/RTR_corrected_lzin2x_o8o6le.mp4'
+      src='/destinations/rtr.mp4'
       type='video/mp4'>
     </video>
     <div className='button-banner'>
@@ -71,7 +69,7 @@ const DestinationRanthambore = () => {
     </div>
 
     <div className='video-banner d-sm-block d-md-none' ref={sec1}>
-    <img src='https://res.cloudinary.com/dl3vc69uw/image/upload/v1704699693/Ranthambore_banner_image_sxpwm2_puadds.jpg' alt='Kenya' className='destination-img' />
+    <img src='/destinations/rtr-mob.jpg' alt='Kenya' className='destination-img' />
     </div>
     
     <div className="container" ref={sec2}>
@@ -107,7 +105,7 @@ const DestinationRanthambore = () => {
         <div className="col-12 col-md-12 col-lg-12 col-xl-12">
           <div className='it-container data-container'>
             <h2 className='bold package-head'>Getting there</h2>
-            <img src='https://res.cloudinary.com/dl3vc69uw/image/upload/v1704699713/RTR_hkbq5t_bdfj9y.png' alt='' className='weather-img'/>      
+            <img src='/destinations/rtr-get.png' alt='' className='weather-img'/>      
           <div className='scroll-container'>
           <BsArrowDownSquareFill size={30} onClick={()=>scrollHandler(sec4)}/> 
             </div>
@@ -119,7 +117,7 @@ const DestinationRanthambore = () => {
       <div className="row">
         <div className="col-12 col-md-12 col-lg-12 col-xl-12">
           <div className='it-container data-container'>
-            <img src='https://res.cloudinary.com/dl3vc69uw/image/upload/v1704699731/10_wq6ke1_pnjm2s.png' alt='' className='weather-img'/>      
+            <img src='/destinations/rtr-map.png' alt='' className='weather-img'/>      
           <div className='scroll-container mt-3'>
           <BsArrowDownSquareFill size={30} onClick={()=>scrollHandler(sec5)}/> 
             </div>
@@ -185,7 +183,7 @@ const DestinationRanthambore = () => {
         <div className="col-12 col-md-12 col-lg-12 col-xl-12">
           <div className='it-container data-container'>
             <h2 className='bold package-head'>Weather at Ranthambore</h2>
-            <img src='https://res.cloudinary.com/dl3vc69uw/image/upload/v1704699751/Ranthambore_gwtjgi_ubj3xn.jpg' alt='' className='weather-img'/>
+            <img src='/destinations/rtr-weather.jpg' alt='' className='weather-img'/>
             <div className='scroll-container'>
             <BsArrowDownSquareFill size={30} onClick={()=>scrollHandler(sec8)}/> 
             </div>        

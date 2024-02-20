@@ -10,11 +10,10 @@ import Helmet from 'react-helmet'
 
 
 const images = [
-    'https://res.cloudinary.com/dl3vc69uw/image/upload/v1704698698/Serengeti_Gallery_1_tsllq0_qygegf.jpg',
-    'https://res.cloudinary.com/dl3vc69uw/image/upload/v1704699305/Serengeti_Gallery_2_x8k0ws_f1oa03.jpg',
-    'https://res.cloudinary.com/dl3vc69uw/image/upload/v1704699321/Serengeti_Gallery_5_tfwqnp_gwe0j9.jpg',
-    'https://res.cloudinary.com/dl3vc69uw/image/upload/v1704699339/Serengeti_Gallery_4_hxckfx_ysw18z.jpg',
-    'https://res.cloudinary.com/dl3vc69uw/image/upload/v1704699365/Serengeti_Gallery_3_ll0y1m_iajnmh.jpg',
+    '/destinations/tan-1.jpg',
+    '/destinations/tan-2.jpg',
+    '/destinations/tan-3.jpg',
+    '/destinations/tan-4.jpg',
 ];
 
 const inclusions = ["Full board stay at resorts","Game drives in 4*4 land cruisers","Internal transfers","National park permit & Entry fees","English speaking guides"];
@@ -60,7 +59,7 @@ const DestinationTanzania = () => {
     </div>
     <div className='video-banner d-none d-md-block' ref={sec1}>
     <video autoPlay loop controls muted
-      src='https://res.cloudinary.com/dl3vc69uw/video/upload/v1704698518/TZ_Final_2_mmdtrs_egpghq_ouhct7.mp4'
+      src='/destinations/tanzania.mp4'
       type='video/mp4'>
     </video>
     <div className='button-banner'>
@@ -69,7 +68,7 @@ const DestinationTanzania = () => {
     </div>
 
     <div className='video-banner d-sm-block d-md-none' ref={sec1}>
-    <img src='https://res.cloudinary.com/dl3vc69uw/image/upload/v1704698560/Tanzania_banner_image_imbp3c_lu9eem.jpg' alt='Kenya' className='destination-img' />
+    <img src='/destinations/tanzania-mob.jpg' alt='Kenya' className='destination-img' />
     </div>
     
     <div className="container" ref={sec2}>
@@ -104,7 +103,7 @@ const DestinationTanzania = () => {
         <div className="col-12 col-md-12 col-lg-12 col-xl-12">
           <div className='it-container data-container'>
             <h2 className='bold package-head'>Getting there</h2>
-            <img src='https://res.cloudinary.com/dl3vc69uw/image/upload/v1704698598/3_ijrmhk_nkrvww.png' alt='' className='weather-img'/>      
+            <img src='/destinations/tan-get.png' alt='' className='weather-img'/>      
           <div className='scroll-container'>
           <BsArrowDownSquareFill size={30} onClick={()=>scrollHandler(sec4)}/>
             </div>
@@ -116,7 +115,7 @@ const DestinationTanzania = () => {
       <div className="row">
         <div className="col-12 col-md-12 col-lg-12 col-xl-12">
           <div className='it-container data-container'>
-            <img src='https://res.cloudinary.com/dl3vc69uw/image/upload/v1704698632/4_hff5af_ga4n2v.png' alt='' className='weather-img'/>      
+            <img src='/destinations/tan-map.png' alt='' className='weather-img'/>      
           <div className='scroll-container mt-3'>
           <BsArrowDownSquareFill size={30} onClick={()=>scrollHandler(sec5)}/> 
             </div>
@@ -235,7 +234,7 @@ const DestinationTanzania = () => {
         <div className="col-12 col-md-12 col-lg-12 col-xl-12">
           <div className='it-container data-container'>
             <h2 className='bold package-head'>Weather at Tanzania</h2>
-            <img src='https://res.cloudinary.com/dl3vc69uw/image/upload/v1704698667/Tanzania_pghqek_yd1gyu.jpg' alt='' className='weather-img'/>
+            <img src='/destinations/tanzania-weather.jpg' alt='' className='weather-img'/>
             <div className='scroll-container'>
             <BsArrowDownSquareFill size={30} onClick={()=>scrollHandler(sec10)}/>
             </div>        

@@ -12,12 +12,12 @@ import { toast, Toaster } from "react-hot-toast";
 
 
 const firebaseConfig = {
-  apiKey: "AIzaSyB4BPMHKw0OXM2PhQX9NcT25lDBWpRpIPQ",
-  authDomain: "phone-auth-d0a8d.firebaseapp.com",
-  projectId: "phone-auth-d0a8d",
-  storageBucket: "phone-auth-d0a8d.appspot.com",
-  messagingSenderId: "309252587015",
-  appId: "1:309252587015:web:6c4a40eb4314344b69b4a2"
+  apiKey: process.env.REACT_APP_API_KEY,
+  authDomain: process.env.REACT_APP_AUTH_DOMAIN,
+  projectId: process.env.REACT_APP_PROJECT_ID,
+  storageBucket: process.env.REACT_APP_STORAGE_BUCKET,
+  messagingSenderId: process.env.REACT_APP_MESSAGING_SENDER_ID,
+  appId: process.env.REACT_APP_APP_ID
 };
 
   firebase.initializeApp(firebaseConfig);
@@ -108,6 +108,7 @@ const Footer = () => {
                 <a href='https://www.google.com/search?q=travel+unbounded&rlz=1C1UEAD_enIN1077IN1077&oq=travel&gs_lcrp=EgZjaHJvbWUqBggCEEUYOzIGCAAQRRg8MgwIARBFGDkYsQMYgAQyBggCEEUYOzIGCAMQRRg9MgYIBBBFGDwyBggFEEUYPTIGCAYQRRg8MgYIBxBFGDzSAQg1NDgyajBqN6gCALACAA&sourceid=chrome&ie=UTF-8#lrd=0x3bae1405d293a9a1:0x2593b16dbea01fb6,3,,,,' className="link" target="__blank">
                     <p className="m-2 text">Write a review</p></a>
             </div>
+            {/* Mobile View News letter */}
             <div className="text-center mb-3 d-sm-block d-md-none d-xl-none d-lg-none">
                 <h5 className="text-head">Subscribe to News letter</h5>
                 <form onSubmit={handleSubmit}>
@@ -118,7 +119,7 @@ const Footer = () => {
                         onChange={(e) => setEmail(e.target.value)} 
                         placeholder="Enter your email" required/>
                         <button type="submit" className="subscribe-btn">Subscribe</button>
-                        </form>
+                </form>
             </div>
             <div style={{ textAlign: 'center', marginLeft:'20px',color:'white', marginBottom:'5px'}}>
                 <BsArrowLeftSquareFill size={30} onClick={handleBack}/>

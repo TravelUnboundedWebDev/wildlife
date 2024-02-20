@@ -1,0 +1,40 @@
+.landing-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+}
+.landing-img{
+    width: 100%;
+    height: 250px;
+}
+.btn-containers{
+    display: flex;
+    flex-direction: column;
+}
+.text-landing{
+    background-color: rgb(224, 233, 183);
+}
+.card-landing{
+    width: 400px;
+    height: auto;
+}
+.btn-landing{
+    height: 40px;
+    margin-top: 10px;
+    border: black 1px solid;
+    border-radius: 16px;
+    color: black;
+    font-weight: 600;
+    font-family: 'Georgia';
+    width: 100%;
+}
+.btn-landing:hover{
+    background-color: black;
+    color: white;
+}
+@media screen and (max-width:756px) {
+    .card-landing{
+        margin-top: 0px;
+    }
+}
